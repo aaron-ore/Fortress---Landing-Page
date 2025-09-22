@@ -2,38 +2,38 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Package, BarChart, ShieldCheck, Zap, TrendingUp, Users } from "lucide-react";
+import { Package, BarChart, ShieldCheck, Zap, TrendingUp, Users, Truck, Smartphone, Bot, Lock } from "lucide-react";
 
 const features = [
   {
     icon: <Package className="h-8 w-8 text-customPurple" />,
-    title: "Real-time Tracking",
-    description: "Monitor your inventory levels and movements instantly, preventing stockouts and overstocking.",
+    title: "Intelligent Inventory Control",
+    description: "Gain real-time visibility and smart stock management with automated alerts, optimized bins, and effortless organization to prevent waste and shortages.",
+  },
+  {
+    icon: <Truck className="h-8 w-8 text-customPurple" />,
+    title: "Streamlined Order Fulfillment",
+    description: "Manage sales and purchase orders with intuitive Kanban boards, accelerate workflows, and generate professional documentation for timely deliveries.",
+  },
+  {
+    icon: <Smartphone className="h-8 w-8 text-customPurple" />,
+    title: "Empowered Warehouse Operations",
+    description: "Equip your team with mobile-optimized tools for rapid item lookup, precise cycle counts, efficient picking, and seamless stock transfers.",
   },
   {
     icon: <BarChart className="h-8 w-8 text-customPurple" />,
-    title: "Advanced Analytics",
-    description: "Gain deep insights into your inventory performance with customizable reports and dashboards.",
+    title: "Actionable Insights & Smart Reporting",
+    description: "Access comprehensive dashboards, deep-dive analytics, and AI-powered summaries to quickly grasp trends and make informed, strategic decisions.",
   },
   {
-    icon: <ShieldCheck className="h-8 w-8 text-customPurple" />,
-    title: "Secure & Reliable",
-    description: "Your data is protected with industry-leading security measures and robust backup systems.",
+    icon: <Bot className="h-8 w-8 text-customPurple" />,
+    title: "Automate for Growth",
+    description: "Set up powerful custom automation rules to handle repetitive tasks, freeing your team to focus on strategic initiatives and business expansion.",
   },
   {
-    icon: <Zap className="h-8 w-8 text-customPurple" />,
-    title: "Automated Workflows",
-    description: "Automate routine tasks like reordering and reporting to save time and reduce errors.",
-  },
-  {
-    icon: <TrendingUp className="h-8 w-8 text-customPurple" />,
-    title: "Scalable Solutions",
-    description: "Fortress grows with your business, adapting to your evolving inventory needs.",
-  },
-  {
-    icon: <Users className="h-8 w-8 text-customPurple" />,
-    title: "User-friendly Interface",
-    description: "An intuitive design ensures quick adoption and efficient daily operations for your team.",
+    icon: <Lock className="h-8 w-8 text-customPurple" />,
+    title: "Secure & Scalable Platform",
+    description: "Benefit from robust user management, customizable experiences, and guided onboarding on a platform designed to grow securely with your business.",
   },
 ];
 

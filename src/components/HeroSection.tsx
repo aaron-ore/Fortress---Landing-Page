@@ -16,10 +16,10 @@ const HeroSection = () => {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-lg">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
-          Fortress: Modern Inventory Management
+          Fortress: Your Command Center for Inventory Excellence
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          Streamline your operations, track assets in real-time, and gain powerful insights with our intuitive and secure inventory software.
+          Transform your operations with intelligent inventory control, streamlined order fulfillment, empowered mobile warehouse management, and actionable insights. Fortress is designed to elevate your business.
         </p>
         <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
           Get Started
