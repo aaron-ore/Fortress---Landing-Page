@@ -161,12 +161,12 @@ const FeaturesPage = () => {
                 </p>
                 <div className="grid grid-cols-1 gap-6">
                   {category.features.map((feature, featIndex) => (
-                    <Card key={featIndex} className="bg-white/5 backdrop-blur-lg p-4 rounded-xl shadow-lg">
+                    <Card key={featIndex} className="bg-background/10 backdrop-blur-xl p-4 rounded-xl shadow-lg">
                       <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-2">
                         <div className="p-2 bg-customPurple/10 rounded-full">
                           {feature.icon}
                         </div>
-                        <CardTitle className="text-xl font-semibold text-white">
+                        <CardTitle className="text-xl font-semibold text-customPurple">
                           {feature.name}
                         </CardTitle>
                       </CardHeader>

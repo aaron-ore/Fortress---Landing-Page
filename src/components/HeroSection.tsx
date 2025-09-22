@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-lg">
+      <div className="relative z-10 text-center max-w-4xl mx-auto bg-background/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-lg">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
           Fortress: Your Command Center for Inventory Excellence
         </h1>
