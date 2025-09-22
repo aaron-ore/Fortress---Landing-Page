@@ -4,6 +4,8 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeatureGrid from '@/components/FeatureGrid';
+import InventoryControlShowcase from '@/components/InventoryControlShowcase';
+import InsightsReportingShowcase from '@/components/InsightsReportingShowcase';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -13,6 +15,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <FeatureGrid />
+        <InventoryControlShowcase />
+        <InsightsReportingShowcase />
       </main>
       <Footer />
     </div>

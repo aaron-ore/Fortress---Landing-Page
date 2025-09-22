@@ -149,33 +149,41 @@ const FeaturesPage = () => {
           </p>
         </div>
 
-        <div className="container mx-auto space-y-16">
+        <div className="container mx-auto space-y-24">
           {featureCategories.map((category, catIndex) => (
-            <section key={catIndex} className="mb-12">
-              <h2 className="text-4xl font-bold text-center mb-4 text-customPurple">
-                {category.title}
-              </h2>
-              <p className="text-lg text-gray-300 text-center max-w-2xl mx-auto mb-10">
-                {category.description}
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.features.map((feature, featIndex) => (
-                  <Card key={featIndex} className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-4">
-                      <div className="p-3 bg-customPurple/10 rounded-full">
-                        {feature.icon}
-                      </div>
-                      <CardTitle className="text-xl font-semibold text-foreground">
-                        {feature.name}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                      <CardDescription className="text-gray-300 text-base">
-                        {feature.details}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
+            <section key={catIndex} className="flex flex-col md:flex-row items-center justify-between gap-12 py-12 border-b border-gray-800 last:border-b-0">
+              <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-1' : 'md:order-2'} text-center md:text-left`}>
+                <h2 className="text-4xl font-bold mb-4 text-customPurple">
+                  {category.title}
+                </h2>
+                <p className="text-lg text-gray-300 mb-8">
+                  {category.description}
+                </p>
+                <div className="grid grid-cols-1 gap-6">
+                  {category.features.map((feature, featIndex) => (
+                    <Card key={featIndex} className="bg-white/5 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/10">
+                      <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-2">
+                        <div className="p-2 bg-customPurple/10 rounded-full">
+                          {feature.icon}
+                        </div>
+                        <CardTitle className="text-xl font-semibold text-white">
+                          {feature.name}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0 text-left">
+                        <CardDescription className="text-gray-300 text-base">
+                          {feature.details}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+              <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
+                {/* Placeholder for category-specific visual */}
+                <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl border border-gray-700 shadow-xl">
+                  {category.title} Visual Placeholder
+                </div>
               </div>
             </section>
           ))}
