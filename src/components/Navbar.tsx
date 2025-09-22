@@ -43,7 +43,7 @@ const Navbar = () => {
     : "max-w-7xl w-[calc(100%-2rem)] md:w-[calc(100%-4rem)]"; // Expanded state
 
   return (
-    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl bg-background/10 backdrop-blur-xl py-4 px-6 md:px-10 transition-all duration-300 ease-in-out ${navbarWidthClasses}`}>
+    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-full bg-background/10 backdrop-blur-xl py-4 px-6 md:px-10 transition-all duration-300 ease-in-out ${navbarWidthClasses}`}>
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground flex items-center">
           <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" />
@@ -64,7 +64,7 @@ const Navbar = () => {
       </div>
 
       {isMobile && isOpen && (
-        <div className="absolute top-full left-0 w-full bg-background/90 backdrop-blur-md border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down">
+        <div className="absolute top-full left-0 w-full bg-background/90 backdrop-blur-md border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down rounded-b-xl">
           {navLinks}
           <Button className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
         </div>
