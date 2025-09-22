@@ -25,7 +25,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="relative z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/40 py-4 px-6 md:px-10">
+    <nav className="sticky top-4 z-50 max-w-7xl mx-auto rounded-xl bg-background/80 backdrop-blur-md border border-border/40 py-4 px-6 md:px-10">
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground">
           Fortress
