@@ -181,7 +181,7 @@ const FeaturesPage = () => {
               </div>
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
                 {/* Placeholder for category-specific visual */}
-                <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl border border-gray-700 shadow-xl">
+                <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl shadow-xl">
                   {category.title} Visual Placeholder
                 </div>
               </div>
