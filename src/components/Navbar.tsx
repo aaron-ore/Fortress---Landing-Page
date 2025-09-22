@@ -9,6 +9,20 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Navbar = () => {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust scroll threshold as needed
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = (
     <>
@@ -24,8 +38,12 @@ const Navbar = () => {
     </>
   );
 
+  const navbarWidthClasses = isScrolled
+    ? "max-w-3xl w-[calc(100%-2rem)] md:w-[calc(100%-4rem)]" // Shrunk state
+    : "max-w-7xl w-[calc(100%-2rem)] md:w-[calc(100%-4rem)]"; // Expanded state
+
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 max-w-7xl w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] rounded-xl bg-background/10 backdrop-blur-xl border border-border/40 py-4 px-6 md:px-10">
+    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl bg-background/10 backdrop-blur-xl border border-border/40 py-4 px-6 md:px-10 transition-all duration-300 ease-in-out ${navbarWidthClasses}`}>
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground">
           Fortress
