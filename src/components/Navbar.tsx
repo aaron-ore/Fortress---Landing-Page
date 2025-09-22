@@ -45,8 +45,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl bg-background/10 backdrop-blur-xl py-4 px-6 md:px-10 transition-all duration-300 ease-in-out ${navbarWidthClasses}`}>
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-foreground">
-          Fortress
+        <Link to="/" className="text-2xl font-bold text-foreground flex items-center">
+          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" />
         </Link>
 
         {isMobile ? (
