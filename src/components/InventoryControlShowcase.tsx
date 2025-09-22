@@ -16,7 +16,7 @@ const InventoryControlShowcase = () => {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
           {/* Placeholder UI for Inventory Control */}
-          <Card className="w-full max-w-md bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20">
+          <Card className="w-full max-w-md bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg">
             <CardHeader className="flex flex-row items-center justify-between p-0 mb-4">
               <div className="flex items-center space-x-2">
                 <Package className="h-6 w-6 text-customPurple" />
