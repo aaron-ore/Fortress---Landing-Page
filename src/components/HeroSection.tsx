@@ -21,7 +21,7 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
           Streamline your operations, track assets in real-time, and gain powerful insights with our intuitive and secure inventory software.
         </p>
-        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
+        <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
           Get Started
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
         </Button>

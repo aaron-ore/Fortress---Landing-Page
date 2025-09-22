@@ -26,13 +26,13 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <Link to="/features" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
+      <Link to="/features" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
         Features
       </Link>
-      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
+      <Link to="/pricing" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
         Pricing
       </Link>
-      <Link to="/contact" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
+      <Link to="/contact" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
         Contact
       </Link>
     </>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <div className="flex space-x-6">
               {navLinks}
             </div>
-            <Button className="px-6 py-2 text-lg text-white">Login</Button>
+            <Button className="px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
           </div>
         )}
       </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
       {isMobile && isOpen && (
         <div className="absolute top-full left-0 w-full bg-background/90 backdrop-blur-md border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down">
           {navLinks}
-          <Button className="w-3/4 px-6 py-2 text-lg text-white">Login</Button>
+          <Button className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
         </div>
       )}
     </nav>
