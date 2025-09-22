@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Package, Scan, Boxes, QrCode, Upload, ClipboardCheck, Kanban, FileText, Smartphone, Barcode, Route, BarChart, LineChart, Bot, Settings, Users, Palette, BookOpen } from "lucide-react";
+import { Package, Scan, Boxes, QrCode, Upload, ClipboardCheck, Kanban, FileText, Smartphone, Barcode, Route, BarChart, LineChart, Bot, Settings, Users, Palette, BookOpen, Zap } from "lucide-react";
 
 const featureCategories = [
   {
