@@ -115,7 +115,7 @@ const featureCategories = [
         details: "Automate routine tasks and notifications, allowing your team to focus on strategic initiatives and business expansion.",
       },
     ],
-    image: "/pasted-image-2025-09-23T21-35-10-037Z.png", // Updated image for this section
+    image: "/Screenshot 2025-09-23 173501.png", // Updated image for this section
   },
   {
     title: "Secure & Scalable Platform",
