@@ -32,7 +32,7 @@ const featureCategories = [
         details: "Easily add new items with images and barcodes, or bulk import your entire inventory in minutes.",
       },
     ],
-    image: "/public/placeholder.svg", // Placeholder for other categories
+    image: "/23.09.2025_17.44.12_REC.png", // Updated image for this section
   },
   {
     title: "Streamlined Order Fulfillment",
