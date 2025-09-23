@@ -188,7 +188,7 @@ const FeaturesPage = () => {
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
                 {/* Category-specific visual */}
                 {category.image ? (
-                  <div className="w-full max-w-lg bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+                  <div className="w-full max-w-lg bg-background/20 backdrop-blur-xl p-2 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
                     <img
                       src={category.image}
                       alt={`${category.title} Visual`}
