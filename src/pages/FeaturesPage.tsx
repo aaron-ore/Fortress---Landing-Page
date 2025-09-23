@@ -54,7 +54,7 @@ const featureCategories = [
         details: "Generate polished PDF invoices and purchase orders directly from the platform, enhancing your brand image.",
       },
     ],
-    image: "/public/placeholder.svg", // Placeholder for other categories
+    image: "/23.09.2025_17.37.37_REC.png", // Updated image for this section
   },
   {
     title: "Empowered Warehouse Operations (Mobile-Optimized)",
