@@ -76,7 +76,7 @@ const featureCategories = [
         details: "Batch sales orders into efficient picking waves, guiding your team through the most effective routes.",
       },
     ],
-    image: "/Gemini_Generated_Image_1xnsad1xnsad1xns.png", // New image for this section
+    image: "/Gemini_Generated_Image_yw9zq7yw9zq7yw9z.png", // Updated image for this section
   },
   {
     title: "Actionable Insights & Smart Reporting",
