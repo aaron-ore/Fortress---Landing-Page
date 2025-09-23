@@ -108,7 +108,7 @@ const PricingPage = () => {
                 <CardTitle className="text-3xl font-bold text-customPurple mb-2">
                   {plan.name}
                 </CardTitle>
-                <CardDescription className="text-gray-300 text-lg">
+                <CardDescription className="text-gray-300 text-4xl font-extrabold mb-1"> {/* Increased font size and boldness */}
                   {plan.monthlyCost}
                 </CardDescription>
                 <p className="text-gray-400 text-sm mt-1">{plan.inventoryLimit}</p>
