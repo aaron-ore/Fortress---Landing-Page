@@ -32,6 +32,7 @@ const featureCategories = [
         details: "Easily add new items with images and barcodes, or bulk import your entire inventory in minutes.",
       },
     ],
+    image: "/public/placeholder.svg", // Placeholder for other categories
   },
   {
     title: "Streamlined Order Fulfillment",
@@ -53,6 +54,7 @@ const featureCategories = [
         details: "Generate polished PDF invoices and purchase orders directly from the platform, enhancing your brand image.",
       },
     ],
+    image: "/public/placeholder.svg", // Placeholder for other categories
   },
   {
     title: "Empowered Warehouse Operations (Mobile-Optimized)",
@@ -74,6 +76,7 @@ const featureCategories = [
         details: "Batch sales orders into efficient picking waves, guiding your team through the most effective routes.",
       },
     ],
+    image: "/Gemini_Generated_Image_1xnsad1xnsad1xns.png", // New image for this section
   },
   {
     title: "Actionable Insights & Smart Reporting",
@@ -95,6 +98,7 @@ const featureCategories = [
         details: "Get concise, intelligent summaries of your reports to quickly grasp key trends and make informed decisions.",
       },
     ],
+    image: "/public/placeholder.svg", // Placeholder for other categories
   },
   {
     title: "Automate for Growth",
@@ -111,6 +115,7 @@ const featureCategories = [
         details: "Automate routine tasks and notifications, allowing your team to focus on strategic initiatives and business expansion.",
       },
     ],
+    image: "/public/placeholder.svg", // Placeholder for other categories
   },
   {
     title: "Secure & Scalable Platform",
@@ -132,6 +137,7 @@ const featureCategories = [
         details: "Get up and running quickly with an intuitive setup wizard and helpful in-app tutorials, ensuring a smooth transition.",
       },
     ],
+    image: "/public/placeholder.svg", // Placeholder for other categories
   },
 ];
 
@@ -180,10 +186,20 @@ const FeaturesPage = () => {
                 </div>
               </div>
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
-                {/* Placeholder for category-specific visual */}
-                <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl shadow-xl">
-                  {category.title} Visual Placeholder
-                </div>
+                {/* Category-specific visual */}
+                {category.image ? (
+                  <div className="w-full max-w-lg bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+                    <img
+                      src={category.image}
+                      alt={`${category.title} Visual`}
+                      className="w-full h-auto rounded-lg object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl shadow-xl">
+                    {category.title} Visual Placeholder
+                  </div>
+                )}
               </div>
             </section>
           ))}
