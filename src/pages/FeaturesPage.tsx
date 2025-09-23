@@ -98,7 +98,7 @@ const featureCategories = [
         details: "Get concise, intelligent summaries of your reports to quickly grasp key trends and make informed decisions.",
       },
     ],
-    image: "/public/placeholder.svg", // Placeholder for other categories
+    image: "/Gemini_Generated_Image_pb5671pb5671pb56.png", // Updated image for this section
   },
   {
     title: "Automate for Growth",
