@@ -12,6 +12,7 @@ const pricingPlans = [
     name: "Free Plan",
     monthlyCost: "Free",
     inventoryLimit: "Up to 25 Inventory Items",
+    userLimit: "1 User",
     features: [
       { name: "Basic Inventory Management", included: true },
       { name: "Dashboard Overview", included: true },
@@ -30,6 +31,7 @@ const pricingPlans = [
     name: "Standard Plan",
     monthlyCost: "$59/month",
     inventoryLimit: "Up to 500 Inventory Items",
+    userLimit: "2 Users (+$15/month for additional user)",
     features: [
       { name: "Basic Inventory Management", included: true },
       { name: "Dashboard Overview", included: true },
@@ -48,6 +50,7 @@ const pricingPlans = [
     name: "Pro Plan",
     monthlyCost: "$125/month",
     inventoryLimit: "Up to 1000 Inventory Items",
+    userLimit: "5 Users (+$10/month for each additional user)",
     features: [
       { name: "Basic Inventory Management", included: true },
       { name: "Dashboard Overview", included: true },
@@ -66,6 +69,7 @@ const pricingPlans = [
     name: "Enterprise Plan",
     monthlyCost: "Contact Sales",
     inventoryLimit: "Unlimited Inventory Items",
+    userLimit: "Unlimited Users",
     features: [
       { name: "Basic Inventory Management", included: true },
       { name: "Dashboard Overview", included: true },
@@ -108,6 +112,7 @@ const PricingPage = () => {
                   {plan.monthlyCost}
                 </CardDescription>
                 <p className="text-gray-400 text-sm mt-1">{plan.inventoryLimit}</p>
+                <p className="text-gray-400 text-sm">{plan.userLimit}</p> {/* Display user limit */}
               </CardHeader>
               <CardContent className="p-0 flex-grow mb-8">
                 <ul className="space-y-3 text-left">
