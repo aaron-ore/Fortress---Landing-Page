@@ -64,7 +64,7 @@ const Navbar = () => {
       </div>
 
       {isMobile && isOpen && (
-        <div className="absolute top-full left-0 w-full bg-background/10 backdrop-blur-xl border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down rounded-b-xl">
+        <div className="absolute top-full left-0 w-full bg-background/50 backdrop-blur-xl border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down rounded-b-xl">
           {navLinks}
           <Button className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
         </div>
