@@ -34,7 +34,7 @@ const HeroSection = () => {
 
         {/* Right side: Image wrapped in a glass card */}
         <div className="md:w-1/2 flex justify-center md:justify-end relative">
-          <div className="w-full max-w-xl md:max-w-2xl bg-background/20 backdrop-blur-xl p-6 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+          <div className="w-full max-w-xl md:max-w-2xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
             <img
               src="/dark.png" // Referencing the attached image
               alt="Fortress Inventory Dashboard"
