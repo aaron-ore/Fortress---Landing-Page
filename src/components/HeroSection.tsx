@@ -13,10 +13,10 @@ const HeroSection = () => {
         {/* Left side: Header, Description, Button */}
         <div className="md:w-1/2 text-center md:text-left py-12">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
-            Simplify Recurring Payments & Subscription Management
+            Fortress Inventory: Your Command Center for Inventory Excellence
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl md:max-w-none mx-auto">
-            Manage subscriptions with ease and keep revenue flowing using Dodo Payments—built for SaaS founders who need reliable, automated billing solutions.
+            Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
           <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
             Get Started
@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="md:w-1/2 flex justify-center md:justify-end relative">
           <img
             src="/dark.png" // Referencing the attached image
-            alt="Dodo Payments Dashboard"
+            alt="Fortress Inventory Dashboard"
             className="w-full max-w-xl md:max-w-2xl h-auto rounded-lg shadow-2xl object-contain"
           />
         </div>
