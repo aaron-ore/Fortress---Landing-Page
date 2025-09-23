@@ -137,7 +137,7 @@ const featureCategories = [
         details: "Get up and running quickly with an intuitive setup wizard and helpful in-app tutorials, ensuring a smooth transition.",
       },
     ],
-    image: "/public/placeholder.svg", // Placeholder for other categories
+    image: "/Gemini_Generated_Image_1ygkg1ygkg1ygkg1.png", // New image for this category
   },
 ];
 
