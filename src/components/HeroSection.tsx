@@ -6,25 +6,37 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-black text-white p-6">
-      {/* Background elements for visual interest */}
-      <div className="absolute inset-0 z-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+    <section className="relative min-h-screen flex flex-col justify-between bg-gradient-to-br from-gray-900 to-black text-white p-6 pt-24 md:pt-32">
+      {/* Background elements (blob animations) removed as per reference image */}
+
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 flex-grow">
+        {/* Left side: Header, Description, Button */}
+        <div className="md:w-1/2 text-center md:text-left py-12">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
+            Simplify Recurring Payments & Subscription Management
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl md:max-w-none mx-auto">
+            Manage subscriptions with ease and keep revenue flowing using Dodo Payments—built for SaaS founders who need reliable, automated billing solutions.
+          </p>
+          <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
+            Get Started
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </Button>
+        </div>
+
+        {/* Right side: Image */}
+        <div className="md:w-1/2 flex justify-center md:justify-end relative">
+          <img
+            src="/dark.png" // Referencing the attached image
+            alt="Dodo Payments Dashboard"
+            className="w-full max-w-xl md:max-w-2xl h-auto rounded-lg shadow-2xl object-contain"
+          />
+        </div>
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto bg-background/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-lg">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
-          Fortress: Your Command Center for Inventory Excellence
-        </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          Transform your operations with intelligent inventory control, streamlined order fulfillment, empowered mobile warehouse management, and actionable insights. Fortress is designed to elevate your business.
-        </p>
-        <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
-          Get Started
-          <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-        </Button>
+      {/* "Trusted by..." text at the bottom */}
+      <div className="text-center text-gray-400 text-sm mt-16 pb-8">
+        Trusted by 10,000+ businesses
       </div>
     </section>
   );
