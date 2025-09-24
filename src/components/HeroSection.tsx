@@ -17,13 +17,13 @@ const HeroSection = () => {
       {/* Dark overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 flex-grow relative z-10">
-        {/* Left side: Header, Description, Button */}
-        <div className="md:w-1/2 text-center md:text-left py-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10">
+        {/* Top section: Header, Description, Button */}
+        <div className="w-full text-center py-12">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto">
             Fortress Inventory: Your Command Center for Inventory Excellence
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl md:max-w-none mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
           <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
@@ -32,9 +32,9 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Right side: Image wrapped in a glass card */}
-        <div className="md:w-1/2 flex justify-center md:justify-end relative">
-          <div className="w-full max-w-2xl md:max-w-3xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+        {/* Bottom section: Image wrapped in a glass card */}
+        <div className="w-full flex justify-center relative">
+          <div className="w-full max-w-4xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
             <img
               src="/dark.png" // Referencing the attached image
               alt="Fortress Inventory Dashboard"
