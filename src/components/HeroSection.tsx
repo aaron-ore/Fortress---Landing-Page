@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const handleGetStartedClick = () => {
+    window.location.href = "https://app.fortressinventory.com";
+  };
+
   return (
     <section 
       className="relative min-h-screen flex flex-col justify-between text-white p-6 pt-24 md:pt-32 overflow-hidden"
@@ -26,7 +30,11 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
-          <Button size="lg" className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group">
+          <Button 
+            size="lg" 
+            className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group"
+            onClick={handleGetStartedClick} // Added onClick handler
+          >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
