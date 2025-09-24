@@ -21,8 +21,12 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("change", handleScroll);
   }, []);
+
+  const handleLoginClick = () => {
+    window.location.href = "https://app.fortressinventory.com";
+  };
 
   const navLinks = (
     <>
@@ -59,7 +63,12 @@ const Navbar = () => {
             <div className="flex space-x-6">
               {navLinks}
             </div>
-            <Button className="px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
+            <Button 
+              className="px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90"
+              onClick={handleLoginClick} // Added onClick handler
+            >
+              Login
+            </Button>
           </div>
         )}
       </div>
@@ -67,7 +76,12 @@ const Navbar = () => {
       {isMobile && isOpen && (
         <div className="absolute top-full left-0 w-full bg-black/50 backdrop-blur-xl border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down rounded-b-xl">
           {navLinks}
-          <Button className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90">Login</Button>
+          <Button 
+            className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90"
+            onClick={handleLoginClick} // Added onClick handler
+          >
+            Login
+          </Button>
         </div>
       )}
     </nav>
