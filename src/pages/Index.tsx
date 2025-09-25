@@ -6,7 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import FeatureGrid from '@/components/FeatureGrid';
 import InventoryControlShowcase from '@/components/InventoryControlShowcase';
 import InsightsReportingShowcase from '@/components/InsightsReportingShowcase';
-import WebsiteEssentials from '@/components/WebsiteEssentials'; // Import the new component
+import PricingCardSection from '@/components/PricingCardSection'; // Import the new component
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -18,7 +18,7 @@ const Index = () => {
         <FeatureGrid />
         <InventoryControlShowcase />
         <InsightsReportingShowcase />
-        <WebsiteEssentials /> {/* Add the new component here */}
+        <PricingCardSection /> {/* Add the new component here */}
       </main>
       <Footer />
     </div>
