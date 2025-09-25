@@ -23,7 +23,7 @@ const pricingPlans = [
   },
   {
     name: "Standard Plan",
-    monthlyCost: "$59/month",
+    monthlyCost: "59", // Changed to number string
     description: "Scale your operations with more features and capacity.",
     features: [
       "Up to 500 Inventory Items",
@@ -34,6 +34,22 @@ const pricingPlans = [
     ],
     buttonText: "Choose Standard",
     buttonLink: "/pricing", // Link to the full pricing page
+    highlight: false,
+  },
+  {
+    name: "Pro Plan",
+    monthlyCost: "125", // New Pro Plan
+    description: "Empower your growing business with comprehensive tools.",
+    features: [
+      "Up to 1000 Inventory Items",
+      "5 Users (+$10/month for each additional)",
+      "Advanced Reporting",
+      "AI Summary for Reports (Coming Soon)",
+      "QuickBooks Integration (Coming Soon)",
+      "Shopify Integration (Coming Soon)",
+    ],
+    buttonText: "Go Pro",
+    buttonLink: "/pricing",
     highlight: false,
   },
   {
@@ -63,7 +79,7 @@ const PricingCardSection = () => {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch"> {/* Changed to 4 columns */}
         {pricingPlans.map((plan, index) => (
           <Card 
             key={index} 
@@ -77,9 +93,15 @@ const PricingCardSection = () => {
                 {plan.description}
               </CardDescription>
               <p className="text-5xl font-extrabold text-white mb-1">
-                {plan.monthlyCost === "Free" ? plan.monthlyCost : `$${plan.monthlyCost.split('/')[0]}`}
+                {plan.monthlyCost === "Free"
+                  ? plan.monthlyCost
+                  : plan.monthlyCost === "Contact Sales"
+                    ? plan.monthlyCost
+                    : `$${plan.monthlyCost}`}
               </p>
-              {plan.monthlyCost !== "Free" && <p className="text-gray-400 text-sm">per month</p>}
+              {plan.monthlyCost !== "Free" && plan.monthlyCost !== "Contact Sales" && (
+                <p className="text-gray-400 text-sm">per month</p>
+              )}
             </CardHeader>
             <CardContent className="p-0 flex-grow mb-8">
               <ul className="space-y-3 text-left">
