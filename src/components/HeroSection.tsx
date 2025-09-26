@@ -42,9 +42,9 @@ const HeroSection = () => {
 
         {/* Bottom section: Image wrapped in a glass card */}
         <div className="w-full flex justify-center relative">
-          <div className="w-full max-w-4xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+          <div className="w-full max-w-5xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
             <img
-              src="/dark.png" // Referencing the attached image
+              src="/hero-dashboard.png" // Referencing the new attached image
               alt="Fortress Inventory Dashboard"
               className="w-full h-auto rounded-lg object-contain"
             />
