@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MadeWithDyad } from "@/components/made-with-dyad";
+// import { MadeWithDyad } from "@/components/made-with-dyad"; // Removed import
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
         </div>
       </div>
-      <MadeWithDyad />
+      {/* <MadeWithDyad /> Removed component */}
     </footer>
   );
 };
