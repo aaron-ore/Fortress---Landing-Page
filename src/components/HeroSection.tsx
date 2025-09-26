@@ -13,7 +13,7 @@ const HeroSection = () => {
     <section 
       className="relative min-h-screen flex flex-col justify-between text-white p-6 pt-24 md:pt-32 overflow-hidden"
       style={{ 
-        backgroundImage: "url('/city-lights-bokeh.jpg')",
+        backgroundImage: "url('/forest-6761846.jpg')", // Updated to the new image
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group"
-            onClick={handleGetStartedClick} // Added onClick handler
+            onClick={handleGetStartedClick}
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -44,7 +44,7 @@ const HeroSection = () => {
         <div className="w-full flex justify-center relative">
           <div className="w-full max-w-5xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
             <img
-              src="/hero-dashboard.png" // Referencing the new attached image
+              src="/hero-dashboard.png"
               alt="Fortress Inventory Dashboard"
               className="w-full h-auto rounded-lg object-contain"
             />
