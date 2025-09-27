@@ -88,6 +88,10 @@ const pricingPlans = [
 ];
 
 const PricingPage = () => {
+  const handleButtonClick = () => {
+    window.location.href = "https://app.fortressinventory.com";
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -130,7 +134,10 @@ const PricingPage = () => {
                   ))}
                 </ul>
               </CardContent>
-              <Button className="w-full bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out">
+              <Button 
+                className="w-full bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
+                onClick={handleButtonClick}
+              >
                 {plan.buttonText}
               </Button>
             </Card>
