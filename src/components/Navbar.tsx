@@ -36,9 +36,8 @@ const Navbar = () => {
       <Link to="/pricing" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
         Pricing
       </Link>
-      <Link to="/contact" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
-        Contact
-
+      <Link to="/about-us" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
+        About Us
       </Link>
     </>
   );
