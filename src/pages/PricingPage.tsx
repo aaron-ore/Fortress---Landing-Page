@@ -107,7 +107,7 @@ const PricingPage = () => {
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className="bg-background/10 backdrop-blur-xl p-6 rounded-xl shadow-lg flex flex-col justify-between border border-white/10">
+            <Card key={index} className="bg-background/10 backdrop-blur-xl p-6 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border border-white/10">
               <CardHeader className="text-center p-0 mb-6">
                 <CardTitle className="text-3xl font-bold text-customPurple mb-2">
                   {plan.name}

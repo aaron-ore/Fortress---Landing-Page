@@ -92,6 +92,9 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      boxShadow: {
+        'white-glow': '0 0 15px rgba(255, 255, 255, 0.2)', // A subtle white glow
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

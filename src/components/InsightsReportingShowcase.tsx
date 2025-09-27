@@ -16,7 +16,7 @@ const InsightsReportingShowcase = () => {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-start">
           {/* Placeholder UI for Insights & Reporting */}
-          <Card className="w-full max-w-md bg-background/10 backdrop-blur-xl p-6 rounded-xl shadow-lg">
+          <Card className="w-full max-w-md bg-background/10 backdrop-blur-xl p-6 rounded-xl shadow-lg shadow-white-glow">
             <CardHeader className="flex flex-row items-center justify-between p-0 mb-4">
               <div className="flex items-center space-x-2">
                 <BarChart className="h-6 w-6 text-customPurple" />

@@ -167,7 +167,7 @@ const FeaturesPage = () => {
                 </p>
                 <div className="grid grid-cols-1 gap-6">
                   {category.features.map((feature, featIndex) => (
-                    <Card key={featIndex} className="bg-background/10 backdrop-blur-xl p-4 rounded-xl shadow-lg">
+                    <Card key={featIndex} className="bg-background/10 backdrop-blur-xl p-4 rounded-xl shadow-lg shadow-white-glow">
                       <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-2">
                         <div className="p-2 bg-customPurple/10 rounded-full">
                           {feature.icon}
@@ -188,7 +188,7 @@ const FeaturesPage = () => {
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
                 {/* Category-specific visual */}
                 {category.image ? (
-                  <div className="w-full max-w-lg bg-background/20 backdrop-blur-xl p-2 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+                  <div className="w-full max-w-lg bg-background/20 backdrop-blur-xl p-2 rounded-xl border border-white/10 shadow-lg shadow-white-glow flex items-center justify-center">
                     <img
                       src={category.image}
                       alt={`${category.title} Visual`}
@@ -196,7 +196,7 @@ const FeaturesPage = () => {
                     />
                   </div>
                 ) : (
-                  <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl shadow-xl">
+                  <div className="w-full max-w-lg h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-xl shadow-xl shadow-white-glow">
                     {category.title} Visual Placeholder
                   </div>
                 )}
