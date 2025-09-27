@@ -49,7 +49,7 @@ const FeatureGrid = () => {
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <Card key={index} className="bg-background/10 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+          <Card key={index} className="bg-[#1F3333] backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
             <CardHeader className="flex flex-col items-center text-center p-0 mb-4">
               <div className="p-4 bg-customPurple/10 rounded-full mb-4 animate-pulse-hover">
                 {feature.icon}
