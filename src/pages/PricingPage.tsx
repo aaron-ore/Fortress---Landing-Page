@@ -44,7 +44,7 @@ const pricingPlans = [
       { name: "Automation Engine", included: false },
       { name: "Dedicated Support", included: false },
     ],
-    buttonText: "Choose Standard",
+    buttonText: "14 days Free Trial",
   },
   {
     name: "Pro Plan",
@@ -63,7 +63,7 @@ const pricingPlans = [
       { name: "Automation Engine", included: false },
       { name: "Dedicated Support", included: false },
     ],
-    buttonText: "Go Pro",
+    buttonText: "14 days Free Trial",
   },
   {
     name: "Enterprise Plan",
@@ -83,7 +83,7 @@ const pricingPlans = [
       { name: "Automation Engine", included: true },
       { name: "Dedicated Support", included: true },
     ],
-    buttonText: "Contact Sales",
+    buttonText: "14 days Free Trial",
   },
 ];
 

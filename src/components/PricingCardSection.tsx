@@ -32,7 +32,7 @@ const pricingPlans = [
       "Advanced Reporting",
       "Basic Integrations (Coming Soon)",
     ],
-    buttonText: "Choose Standard",
+    buttonText: "14 days Free Trial",
     buttonLink: "/pricing", // Link to the full pricing page
     highlight: false,
   },
@@ -48,7 +48,7 @@ const pricingPlans = [
       "QuickBooks Integration (Coming Soon)",
       "Shopify Integration (Coming Soon)",
     ],
-    buttonText: "Go Pro",
+    buttonText: "14 days Free Trial",
     buttonLink: "/pricing",
     highlight: false,
   },
@@ -63,7 +63,7 @@ const pricingPlans = [
       "Automation Engine",
       "Dedicated Support & Onboarding",
     ],
-    buttonText: "Contact Sales",
+    buttonText: "14 days Free Trial",
     buttonLink: "/contact", // Assuming a contact page exists or will be created
     highlight: false,
   },
