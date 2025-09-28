@@ -71,10 +71,10 @@ const pricingPlans = [
 
 const PricingCardSection = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-gray-950 to-black text-white">
+    <section className="py-20 px-6 bg-background text-foreground">
       <div className="container mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Simple, Transparent Pricing</h2>
+        <p className="text-xl text-foreground max-w-3xl mx-auto">
           Start with our free plan or choose a tier that grows with your business. No hidden fees, no surprises.
         </p>
       </div>
@@ -83,16 +83,16 @@ const PricingCardSection = () => {
         {pricingPlans.map((plan, index) => (
           <Card 
             key={index} 
-            className={`bg-background/10 backdrop-blur-xl p-8 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border ${plan.highlight ? 'border-customPurple ring-2 ring-customPurple' : 'border-white/10'} hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2`}
+            className={`bg-card/10 backdrop-blur-xl p-8 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border ${plan.highlight ? 'border-customPurple ring-2 ring-customPurple' : 'border-border/10'} hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2`}
           >
             <CardHeader className="text-center p-0 mb-6">
-              <CardTitle className="text-3xl font-bold text-customPurple mb-2">
+              <CardTitle className="text-3xl font-bold text-primary mb-2">
                 {plan.name}
               </CardTitle>
-              <CardDescription className="text-gray-300 text-lg mb-4">
+              <CardDescription className="text-foreground text-lg mb-4">
                 {plan.description}
               </CardDescription>
-              <p className="text-5xl font-extrabold text-white mb-1">
+              <p className="text-5xl font-extrabold text-foreground mb-1">
                 {plan.monthlyCost === "Free"
                   ? plan.monthlyCost
                   : plan.monthlyCost === "Contact Sales"
@@ -100,13 +100,13 @@ const PricingCardSection = () => {
                     : `$${plan.monthlyCost}`}
               </p>
               {plan.monthlyCost !== "Free" && plan.monthlyCost !== "Contact Sales" && (
-                <p className="text-gray-400 text-sm">per month</p>
+                <p className="text-muted-foreground text-sm">per month</p>
               )}
             </CardHeader>
             <CardContent className="p-0 flex-grow mb-8">
               <ul className="space-y-3 text-left">
                 {plan.features.map((feature, featIndex) => (
-                  <li key={featIndex} className="flex items-center text-base text-gray-200">
+                  <li key={featIndex} className="flex items-center text-base text-foreground">
                     <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
@@ -114,7 +114,7 @@ const PricingCardSection = () => {
               </ul>
             </CardContent>
             <Button 
-              className="w-full bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
               onClick={() => window.location.href = plan.buttonLink}
             >
               {plan.buttonText}

@@ -11,7 +11,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex flex-col justify-between text-white p-6 pt-24 md:pt-32 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-between text-foreground p-6 pt-24 md:pt-32 overflow-hidden"
       style={{ 
         backgroundImage: "url('/forest-6761846.jpg')", // Updated to the new image
         backgroundSize: "cover",
@@ -24,15 +24,15 @@ const HeroSection = () => {
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10">
         {/* Top section: Header, Description, Button */}
         <div className="w-full text-center py-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary">
             Fortress Inventory: Your Command Center for Inventory Excellence
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto">
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
           <Button 
             size="lg" 
-            className="bg-customPurple hover:bg-customPurple/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group"
             onClick={handleGetStartedClick}
           >
             Get Started
@@ -53,7 +53,7 @@ const HeroSection = () => {
       </div>
 
       {/* "Trusted by..." text at the bottom */}
-      <div className="text-center text-gray-400 text-sm mt-16 pb-8 relative z-10">
+      <div className="text-center text-muted-foreground text-sm mt-16 pb-8 relative z-10">
         Trusted by 10,000+ businesses
       </div>
     </section>

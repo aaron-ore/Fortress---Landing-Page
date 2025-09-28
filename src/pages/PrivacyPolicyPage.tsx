@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="pt-32 pb-20 px-6 bg-gradient-to-br from-gray-950 to-black text-white">
+      <main className="pt-32 pb-20 px-6 bg-background text-foreground">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md">
             Privacy Policy for Fortress Inventory
@@ -22,12 +22,12 @@ const PrivacyPolicyPage = () => {
               This Privacy Policy describes how Fortress Inventory ("we," "us," or "our") collects, uses, and shares information in connection with your use of the Fortress Inventory web and mobile application and related services (collectively, the "Service").
             </p>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">1. Information We Collect</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. Information We Collect</h2>
             <p>
               We collect information to provide, maintain, and improve the Service. This information falls into two main categories:
             </p>
 
-            <h3 className="text-2xl font-semibold text-customPurple mt-6 mb-3">A. Data You Provide Directly (Account and Inventory Data)</h3>
+            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">A. Data You Provide Directly (Account and Inventory Data)</h3>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>Account Information:</strong> Your name, email address, phone number, and password (hashed).</li>
               <li><strong>Billing Information:</strong> When you subscribe to a paid plan, we (or our third-party payment processor) collect necessary payment details, such as credit card information.</li>
@@ -40,14 +40,14 @@ const PrivacyPolicyPage = () => {
               </li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-customPurple mt-6 mb-3">B. Data We Collect Automatically (Technical and Usage Data)</h3>
+            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">B. Data We Collect Automatically (Technical and Usage Data)</h3>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>Device Information:</strong> Information about the device you use to access the Service, including IP address, operating system, device identifiers, and mobile network information.</li>
               <li><strong>Usage Information:</strong> Details about how you access and use the Service, such as the features you use, the time and duration of your activity, error reports, and crash data.</li>
               <li><strong>Cookies and Tracking:</strong> We and our third-party partners may use cookies and similar technologies to track activity on the Service and hold certain information.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">2. How We Use Your Information</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">2. How We Use Your Information</h2>
             <p>
               We use the collected information for the following purposes:
             </p>
@@ -59,7 +59,7 @@ const PrivacyPolicyPage = () => {
               <li><strong>Marketing:</strong> To send you promotional communications about our products and services, where permitted by law and in line with your preferences.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">3. How We Share Your Information</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">3. How We Share Your Information</h2>
             <p>
               We do not sell your personal data or your Inventory Data to third parties for their marketing purposes. We may share information only in the following limited circumstances:
             </p>
@@ -70,13 +70,13 @@ const PrivacyPolicyPage = () => {
               <li><strong>Business Transfers:</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">4. Data Retention and Security</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">4. Data Retention and Security</h2>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>Data Retention:</strong> We retain your personal data and Inventory Data for as long as your account is active or as needed to provide you with the Service. We will also retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</li>
               <li><strong>Security:</strong> We implement technical and organizational measures (such as encryption and access controls) designed to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">5. Your Data Rights</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">5. Your Data Rights</h2>
             <p>
               You have rights regarding your personal data, which may include:
             </p>
@@ -90,13 +90,13 @@ const PrivacyPolicyPage = () => {
               You can typically access and update your Account Information directly within the Service settings. For other requests, please contact us using the details below.
             </p>
 
-            <h2 className="text-3xl font-bold text-customPurple mt-10 mb-4">6. Contact Us</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">6. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p className="space-y-1">
               <strong>Fortress Inventory</strong><br />
-              Email: <a href="mailto:privacy@fortressinventory.com" className="text-customPurple hover:underline">privacy@fortressinventory.com</a><br />
+              Email: <a href="mailto:privacy@fortressinventory.com" className="text-primary hover:underline">privacy@fortressinventory.com</a><br />
               Address: Fortress Inventory 333 W 39th St. Ste 303, NY,NY 10018
             </p>
           </div>
