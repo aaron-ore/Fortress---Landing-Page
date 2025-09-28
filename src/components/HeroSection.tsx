@@ -27,7 +27,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary">
             Fortress Inventory: Your Command Center for Inventory Excellence
           </h1>
-          <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto">
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
           <Button 
@@ -42,7 +42,7 @@ const HeroSection = () => {
 
         {/* Bottom section: Image wrapped in a glass card */}
         <div className="w-full flex justify-center relative">
-          <div className="w-full max-w-5xl bg-background/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+          <div className="w-full max-w-5xl bg-card/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
             <img
               src="/hero-dashboard.png"
               alt="Fortress Inventory Dashboard"

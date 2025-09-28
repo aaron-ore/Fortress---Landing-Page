@@ -83,7 +83,7 @@ const PricingCardSection = () => {
         {pricingPlans.map((plan, index) => (
           <Card 
             key={index} 
-            className={`bg-card/10 backdrop-blur-xl p-8 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border ${plan.highlight ? 'border-customPurple ring-2 ring-customPurple' : 'border-border/10'} hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2`}
+            className={`bg-card/10 backdrop-blur-xl p-8 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border ${plan.highlight ? 'border-primary ring-2 ring-primary' : 'border-border/10'} hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2`}
           >
             <CardHeader className="text-center p-0 mb-6">
               <CardTitle className="text-3xl font-bold text-primary mb-2">

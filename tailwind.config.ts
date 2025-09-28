@@ -62,8 +62,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom color for buttons, now theme-aware
-        customPurple: "hsl(var(--custom-purple))",
       },
       borderRadius: {
         lg: "var(--radius)",

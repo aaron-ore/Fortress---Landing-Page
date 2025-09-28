@@ -30,13 +30,13 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <Link to="/features" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
+      <Link to="/features" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
         Features
       </Link>
-      <Link to="/pricing" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
+      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
         Pricing
       </Link>
-      <Link to="/about-us" className="text-lg font-medium text-white hover:text-gray-200 transition-colors">
+      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-gray-200 transition-colors">
         About Us
       </Link>
     </>
@@ -54,7 +54,7 @@ const Navbar = () => {
         </Link>
 
         {isMobile ? (
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-white">
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-foreground">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         ) : (
@@ -63,7 +63,7 @@ const Navbar = () => {
               {navLinks}
             </div>
             <Button 
-              className="px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90"
+              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground"
               onClick={handleLoginClick} // Added onClick handler
             >
               Login
@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className="absolute top-full left-0 w-full bg-black/50 backdrop-blur-xl border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down rounded-b-xl">
           {navLinks}
           <Button 
-            className="w-3/4 px-6 py-2 text-lg text-white bg-customPurple hover:bg-customPurple/90"
+            className="w-3/4 px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground"
             onClick={handleLoginClick} // Added onClick handler
           >
             Login
