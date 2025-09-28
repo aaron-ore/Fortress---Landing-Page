@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ThemeToggle } from "./ThemeToggle";
+
 
 const Footer = () => {
   return (
@@ -11,7 +11,6 @@ const Footer = () => {
         <div className="flex space-x-6 items-center">
           <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-          <ThemeToggle />
         </div>
       </div>
     </footer>
