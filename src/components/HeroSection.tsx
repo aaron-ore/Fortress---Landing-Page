@@ -11,13 +11,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section 
-      className="relative min-h-screen flex flex-col justify-between text-foreground p-6 pt-24 md:pt-32 overflow-hidden"
-      style={{ 
-        backgroundImage: "url('/forest-6761846.jpg')", // Updated to the new image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+    <section
+      className="relative min-h-screen flex flex-col justify-between text-foreground p-6 pt-24 md:pt-32 overflow-hidden bg-transparent" // Removed inline style and added bg-transparent
     >
       {/* Dark overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -31,8 +26,8 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto">
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group"
             onClick={handleGetStartedClick}
           >
