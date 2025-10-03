@@ -45,7 +45,7 @@
   }
 
   .dark {
-    /* Removed --background as it's replaced by gradient */
+    --background: 240 10% 8%; /* Fallback if gradient fails, but primarily for other elements */
     --foreground: 210 40% 98%; /* White */
 
     --card: 140 10% 20.8%; /* #313E35 */
@@ -86,6 +86,12 @@
     /* New gradient colors for the body background */
     --gradient-start: 240 10% 8%; /* Very dark blue/black */
     --gradient-end: 265 30% 15%; /* Dark purple */
+
+    /* Apply gradient background to the body when in dark mode */
+    & body {
+      background: linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+      background-attachment: fixed; /* Ensures gradient covers full viewport even on scroll */
+    }
   }
 }
 
@@ -96,9 +102,9 @@
 
   body {
     @apply text-foreground;
-    /* Apply gradient background to the body */
-    background: linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
-    background-attachment: fixed; /* Ensures gradient covers full viewport even on scroll */
+    /* Ensure html and body take full height for gradient */
+    min-height: 100vh;
+    width: 100%;
   }
 
   .dark h1,
