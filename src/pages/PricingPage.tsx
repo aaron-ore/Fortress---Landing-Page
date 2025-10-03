@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const pricingPlans = [
   {
@@ -88,6 +90,8 @@ const pricingPlans = [
 ];
 
 const PricingPage = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
+
   const handleButtonClick = () => {
     window.location.href = "https://app.fortressinventory.com";
   };
@@ -105,9 +109,17 @@ const PricingPage = () => {
           </p>
         </div>
 
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={ref} className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow flex flex-col justify-between">
+            <Card 
+              key={index} 
+              className={cn(
+                "bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow card-3d-hover flex flex-col justify-between", // Added card-3d-hover
+                "opacity-0 translate-y-10", // Initial hidden state
+                isVisible && `animate-slide-in-from-bottom animation-delay-${index * 100}` // Animate when visible
+              )}
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardHeader className="text-center p-0 mb-6">
                 <CardTitle className="text-3xl font-bold text-primary mb-2">
                   {plan.name}

@@ -49,7 +49,6 @@ const FeatureGrid = () => {
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
           Fortress provides the tools you need to manage your inventory with precision and confidence.
         </p>
-        {/* Removed the image div as per the new design */}
       </div>
 
       <div ref={ref} className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,10 +56,10 @@ const FeatureGrid = () => {
           <Card 
             key={index} 
             className={cn(
-              "bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2",
+              "bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow card-3d-hover", // Added card-3d-hover
               "opacity-0 translate-y-10", // Initial hidden state
-              isVisible && `opacity-100 translate-y-0 animate-slide-up animation-delay-${index * 100}` // Animate when visible
-            )} // Updated card styling
+              isVisible && `animate-slide-in-from-bottom animation-delay-${index * 100}` // Animate when visible
+            )} 
             style={{ animationDelay: `${index * 100}ms` }} // Apply delay dynamically
           >
             <CardHeader className="flex flex-col items-center text-center p-0 mb-4">

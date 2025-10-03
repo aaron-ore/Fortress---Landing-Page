@@ -4,6 +4,8 @@ import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const pricingPlans = [
   {
@@ -70,6 +72,8 @@ const pricingPlans = [
 ];
 
 const PricingCardSection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
+
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
@@ -79,11 +83,17 @@ const PricingCardSection = () => {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch">
+      <div ref={ref} className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch">
         {pricingPlans.map((plan, index) => (
           <Card 
             key={index} 
-            className={`bg-card/50 backdrop-blur-sm p-8 rounded-xl border border-border/50 flex flex-col justify-between ${plan.highlight ? 'border-secondary ring-2 ring-secondary glow-shadow' : 'glow-shadow'} hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2`} // Updated card styling
+            className={cn(
+              `bg-card/50 backdrop-blur-sm p-8 rounded-xl border border-border/50 flex flex-col justify-between card-3d-hover`, // Added card-3d-hover
+              plan.highlight ? 'border-secondary ring-2 ring-secondary glow-shadow-lg' : 'glow-shadow', // Stronger glow for highlighted card
+              "opacity-0 translate-y-10", // Initial hidden state
+              isVisible && `animate-slide-in-from-bottom animation-delay-${index * 100}` // Animate when visible
+            )} 
+            style={{ animationDelay: `${index * 100}ms` }}
           >
             <CardHeader className="text-center p-0 mb-6">
               <CardTitle className="text-3xl font-bold text-primary mb-2">

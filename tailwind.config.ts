@@ -97,6 +97,14 @@ export default {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.03)" },
         },
+        "slide-in-from-bottom": {
+          "0%": { opacity: "0", transform: "translateY(50px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "fade-in-scale": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,10 +112,13 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "slide-up": "slide-up 0.6s ease-out forwards",
         "logo-pulse": "logo-pulse 2s infinite ease-in-out",
+        "slide-in-from-bottom": "slide-in-from-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
+        "fade-in-scale": "fade-in-scale 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
       },
       boxShadow: {
         'white-glow': '0 0 15px rgba(255, 255, 255, 0.2)', // A subtle white glow
-        'glow-shadow': '0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.15)', // New blue/purple glow
+        'glow-shadow': '0 0 10px hsl(var(--secondary) / 0.2), 0 0 20px hsl(var(--secondary) / 0.1)', // New blue/purple glow
+        'glow-shadow-lg': '0 0 20px hsl(var(--secondary) / 0.4), 0 0 40px hsl(var(--secondary) / 0.2)', // More pronounced glow for hover
       },
     },
   },

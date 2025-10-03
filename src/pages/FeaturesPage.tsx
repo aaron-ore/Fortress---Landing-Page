@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Package, Scan, Boxes, QrCode, Upload, ClipboardCheck, Kanban, FileText, Smartphone, Barcode, Route, BarChart, LineChart, Bot, Settings, Users, Palette, BookOpen, Zap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const featureCategories = [
   {
@@ -142,6 +144,8 @@ const featureCategories = [
 ];
 
 const FeaturesPage = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.1); // Adjust threshold for earlier animation
+
   return (
     <div className="min-h-screen bg-transparent text-foreground">
       <Navbar />
@@ -155,9 +159,17 @@ const FeaturesPage = () => {
           </p>
         </div>
 
-        <div className="container mx-auto space-y-24">
+        <div ref={ref} className="container mx-auto space-y-24">
           {featureCategories.map((category, catIndex) => (
-            <section key={catIndex} className="flex flex-col md:flex-row items-center justify-between gap-12 py-12 border-b border-border/30 last:border-b-0"> {/* Updated border */}
+            <section 
+              key={catIndex} 
+              className={cn(
+                "flex flex-col md:flex-row items-center justify-between gap-12 py-12 border-b border-border/30 last:border-b-0",
+                "opacity-0 translate-y-10", // Initial hidden state
+                isVisible && `animate-slide-in-from-bottom animation-delay-${catIndex * 200}` // Staggered animation for sections
+              )}
+              style={{ animationDelay: `${catIndex * 200}ms` }}
+            >
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-1' : 'md:order-2'} text-center md:text-left`}>
                 <h2 className="text-4xl font-bold mb-4 text-primary">
                   {category.title}
@@ -167,7 +179,15 @@ const FeaturesPage = () => {
                 </p>
                 <div className="grid grid-cols-1 gap-6">
                   {category.features.map((feature, featIndex) => (
-                    <Card key={featIndex} className="bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 glow-shadow"> {/* Updated card styling */}
+                    <Card 
+                      key={featIndex} 
+                      className={cn(
+                        "bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 glow-shadow card-3d-hover", // Added card-3d-hover
+                        "opacity-0 translate-y-10", // Initial hidden state
+                        isVisible && `animate-slide-in-from-bottom animation-delay-${(catIndex * 200) + (featIndex * 50)}` // Staggered animation for features
+                      )}
+                      style={{ animationDelay: `${(catIndex * 200) + (featIndex * 50)}ms` }}
+                    >
                       <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-2">
                         <div className="p-2 bg-secondary/10 rounded-full"> {/* Updated background color */}
                           {feature.icon}
@@ -188,7 +208,13 @@ const FeaturesPage = () => {
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
                 {/* Category-specific visual */}
                 {category.image ? (
-                  <div className="w-full max-w-lg bg-card/20 backdrop-blur-xl p-2 rounded-xl border border-border/10 glow-shadow flex items-center justify-center"> {/* Updated styling */}
+                  <div className={cn(
+                    "w-full max-w-lg bg-card/20 backdrop-blur-xl p-2 rounded-xl border border-border/10 glow-shadow",
+                    "opacity-0 translate-y-10", // Initial hidden state
+                    isVisible && `animate-slide-in-from-bottom animation-delay-${(catIndex * 200) + 100}` // Staggered animation for image
+                  )}
+                  style={{ animationDelay: `${(catIndex * 200) + 100}ms` }}
+                  >
                     <img
                       src={category.image}
                       alt={`${category.title} Visual`}
@@ -196,7 +222,13 @@ const FeaturesPage = () => {
                     />
                   </div>
                 ) : (
-                  <div className="w-full max-w-lg h-64 bg-muted rounded-xl flex items-center justify-center text-muted-foreground text-xl glow-shadow"> {/* Updated styling */}
+                  <div className={cn(
+                    "w-full max-w-lg h-64 bg-muted rounded-xl flex items-center justify-center text-muted-foreground text-xl glow-shadow",
+                    "opacity-0 translate-y-10", // Initial hidden state
+                    isVisible && `animate-slide-in-from-bottom animation-delay-${(catIndex * 200) + 100}` // Staggered animation for placeholder
+                  )}
+                  style={{ animationDelay: `${(catIndex * 200) + 100}ms` }}
+                  >
                     {category.title} Visual Placeholder
                   </div>
                 )}

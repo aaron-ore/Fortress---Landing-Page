@@ -3,6 +3,8 @@
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Award, Heart, TrendingUp, ShieldCheck, Lightbulb, Users } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const reasons = [
   {
@@ -38,6 +40,8 @@ const reasons = [
 ];
 
 const WhyChooseUs = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
+
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
@@ -47,9 +51,17 @@ const WhyChooseUs = () => {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div ref={ref} className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {reasons.map((reason, index) => (
-          <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2"> {/* Updated card styling */}
+          <Card 
+            key={index} 
+            className={cn(
+              "bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow card-3d-hover", // Added card-3d-hover
+              "opacity-0 translate-y-10", // Initial hidden state
+              isVisible && `animate-slide-in-from-bottom animation-delay-${index * 100}` // Animate when visible
+            )} 
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
             <CardHeader className="flex flex-col items-center text-center p-0 mb-4">
               <div className="p-4 bg-secondary/10 rounded-full mb-4 animate-pulse-hover"> {/* Updated background color */}
                 {reason.icon}

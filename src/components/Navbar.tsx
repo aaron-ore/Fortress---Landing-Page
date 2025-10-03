@@ -51,7 +51,7 @@ const Navbar = () => {
     <nav
       className={cn(
         "sticky top-4 z-50 mx-auto rounded-full bg-background/50 backdrop-blur-lg border border-border/50 transition-all duration-300 ease-in-out py-3 px-6 md:px-10",
-        isScrolled ? "max-w-5xl" : "max-w-7xl"
+        isScrolled ? "max-w-5xl shadow-xl" : "max-w-7xl" // Added shadow-xl when scrolled
       )}
     >
       <div className="container mx-auto flex items-center justify-between">

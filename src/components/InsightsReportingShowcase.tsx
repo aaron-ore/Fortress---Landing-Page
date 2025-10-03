@@ -3,20 +3,31 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, TrendingUp } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const InsightsReportingShowcase = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
+
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-12">
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className={cn(
+          "md:w-1/2 text-center md:text-left",
+          "opacity-0 translate-y-10",
+          isVisible && "animate-slide-in-from-bottom animation-delay-100"
+        )}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Actionable Insights & Smart Reporting</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Access comprehensive dashboards, deep-dive analytics, and AI-powered summaries to quickly grasp trends and make informed, strategic decisions.
           </p>
         </div>
-        <div className="md:w-1/2 flex justify-center md:justify-start">
-          {/* Placeholder UI for Insights & Reporting */}
-          <Card className="w-full max-w-md bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow"> {/* Updated card styling */}
+        <div ref={ref} className={cn(
+          "md:w-1/2 flex justify-center md:justify-start",
+          "opacity-0 translate-y-10",
+          isVisible && "animate-slide-in-from-bottom animation-delay-300"
+        )}>
+          <Card className="w-full max-w-md bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow card-3d-hover"> {/* Updated card styling */}
             <CardHeader className="flex flex-row items-center justify-between p-0 mb-4">
               <div className="flex items-center space-x-2">
                 <BarChart className="h-6 w-6 text-secondary" /> {/* Updated icon color */}

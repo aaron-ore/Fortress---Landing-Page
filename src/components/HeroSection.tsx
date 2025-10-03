@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import YouTubeVideoPlayer from "./YouTubeVideoPlayer"; // Import the new component
+import { cn } from "@/lib/utils"; // Import cn for conditional class names
 
 const HeroSection = () => {
   const handleGetStartedClick = () => {
@@ -14,34 +15,49 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex flex-col justify-center items-center text-foreground p-6 pt-16 md:pt-20 overflow-hidden" // Adjusted padding
     >
-      {/* Removed the absolute inset-0 bg-gradient-to-br div */}
-
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10 text-center">
-        {/* Top section: Header, Description, YouTube Video, Button */}
         <div className="w-full py-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary animate-fade-in"> {/* Added animation */}
+          <h1 className={cn(
+            "text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary",
+            "opacity-0 translate-y-10", // Initial hidden state
+            "animate-slide-in-from-bottom" // Apply new animation
+          )}>
             Fortress Inventory: <br className="hidden sm:inline"/> Master Your Inventory. Maximize Your Profit.
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-200"> {/* Added animation and delay */}
+          <p className={cn(
+            "text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto",
+            "opacity-0 translate-y-10", // Initial hidden state
+            "animate-slide-in-from-bottom animation-delay-200" // Apply new animation with delay
+          )}>
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
           </p>
           
-          {/* YouTube Video Player */}
-          <div className="w-full max-w-4xl mx-auto mb-12 animate-fade-in animation-delay-400">
+          <div className={cn(
+            "w-full max-w-4xl mx-auto mb-12",
+            "opacity-0 translate-y-10", // Initial hidden state
+            "animate-slide-in-from-bottom animation-delay-400" // Apply new animation with delay
+          )}>
             <YouTubeVideoPlayer videoId="BbjYgTiS9HA" className="shadow-2xl glow-shadow" />
           </div>
 
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow animate-slide-up animation-delay-600" // Added animation and delay
+            className={cn(
+              "bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow",
+              "opacity-0 translate-y-10", // Initial hidden state
+              "animate-slide-in-from-bottom animation-delay-600" // Apply new animation with delay
+            )}
             onClick={handleGetStartedClick}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </div>
 
-        {/* "Trusted by..." text at the bottom */}
-        <div className="text-center text-muted-foreground text-sm mt-16 pb-8 relative z-10 animate-fade-in animation-delay-800"> {/* Added animation and delay */}
+        <div className={cn(
+          "text-center text-muted-foreground text-sm mt-16 pb-8 relative z-10",
+          "opacity-0", // Initial hidden state
+          "animate-fade-in-scale animation-delay-800" // Apply new animation with delay
+        )}>
           Trusted by 10,000+ businesses
         </div>
       </div>
