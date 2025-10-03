@@ -61,14 +61,14 @@ const ExitIntentPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-[425px] p-6 bg-card backdrop-blur-lg rounded-lg shadow-2xl border border-primary/50">
+      <DialogContent className="sm:max-w-[425px] p-6 bg-black backdrop-blur-lg rounded-lg shadow-2xl border border-primary/50">
         <DialogHeader className="text-center">
-          <DialogTitle className="text-3xl font-bold text-primary mb-2">
+          <DialogTitle className="text-3xl font-bold text-white mb-2">
             Wait! Don't Miss Out!
           </DialogTitle>
           <DialogDescription className="text-foreground text-lg">
             Ready to revolutionize your inventory? Start your
-            <span className="font-extrabold text-primary"> 14-day Free Trial</span> today!
+            <span className="font-extrabold text-accent"> 14-day Free Trial</span> today!
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
