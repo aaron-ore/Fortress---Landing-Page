@@ -45,7 +45,7 @@
   }
 
   .dark {
-    --background: 218 10% 19.8%; /* #292D32 */
+    /* Removed --background as it's replaced by gradient */
     --foreground: 210 40% 98%; /* White */
 
     --card: 140 10% 20.8%; /* #313E35 */
@@ -82,6 +82,10 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New gradient colors for the body background */
+    --gradient-start: 240 10% 8%; /* Very dark blue/black */
+    --gradient-end: 265 30% 15%; /* Dark purple */
   }
 }
 
@@ -91,7 +95,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    /* Apply gradient background to the body */
+    background: linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    background-attachment: fixed; /* Ensures gradient covers full viewport even on scroll */
   }
 
   .dark h1,

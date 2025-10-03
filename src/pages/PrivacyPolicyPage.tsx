@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       <Navbar />
-      <main className="pt-32 pb-20 px-6 bg-background text-foreground">
+      <main className="pt-32 pb-20 px-6 bg-transparent text-foreground">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md">
             Privacy Policy for Fortress Inventory

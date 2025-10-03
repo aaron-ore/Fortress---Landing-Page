@@ -143,9 +143,9 @@ const featureCategories = [
 
 const FeaturesPage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       <Navbar />
-      <main className="pt-32 pb-20 px-6 bg-background text-foreground">
+      <main className="pt-32 pb-20 px-6 bg-transparent text-foreground">
         <div className="container mx-auto text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-primary">
             Fortress Features: Your Command Center for Inventory Excellence
