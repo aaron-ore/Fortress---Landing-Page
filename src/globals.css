@@ -108,7 +108,7 @@
       linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))), /* 1. Main Gradient (bottom) */
       linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* 2. Grid X */
       linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px), /* 3. Grid Y */
-      radial-gradient(circle at top center, hsl(var(--secondary) / 0.08) 0%, transparent 50%); /* 4. Subtle top glow (top) */
+      radial-gradient(circle at top center, hsl(var(--accent) / 0.2) 0%, transparent 50%); /* 4. More prominent top glow (top) */
     background-size: cover, 40px 40px, 40px 40px, 100% 100%; /* Sizes: Main, GridX, GridY, Glow */
     background-position: 0 0, 0 0, 0 0, center top; /* Positions: Main, GridX, GridY, Glow */
     background-repeat: no-repeat, repeat, repeat, no-repeat; /* Repeat: Main, GridX, GridY, Glow */
