@@ -45,7 +45,7 @@
   }
 
   .dark {
-    --background: 220 15% 10%; /* Dark blue-grey */
+    --background: 220 15% 5%; /* Very dark blue-grey, closer to black */
     --foreground: 210 40% 98%; /* Off-white for text */
 
     --card: 220 15% 15%; /* Slightly lighter dark for cards */
@@ -85,8 +85,8 @@
     --sidebar-ring: 230 80% 60%;
 
     /* New gradient colors for the body background */
-    --gradient-start: 220 15% 8%; /* Very dark blue-grey */
-    --gradient-end: 240 20% 12%; /* Dark purple-blue */
+    --gradient-start: 220 15% 3%; /* Even darker start */
+    --gradient-end: 240 20% 7%; /* Darker purple-blue end */
 
     /* Apply gradient background to the body when in dark mode */
     & body {
@@ -94,8 +94,8 @@
       background-attachment: fixed;
       /* Grid pattern overlay */
       background-image: 
-        linear-gradient(to right, hsl(var(--border) / 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, hsl(var(--border) / 0.1) 1px, transparent 1px); /* Reduced opacity here */
+        linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Even lower opacity */
+        linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px); /* Even lower opacity */
       background-size: 40px 40px; /* Adjust grid size as needed */
       background-blend-mode: overlay; /* Blend grid with gradient */
     }
