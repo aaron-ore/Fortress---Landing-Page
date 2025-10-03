@@ -53,7 +53,7 @@ const Navbar = () => {
     <nav className={navbarClasses}>
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground flex items-center">
-          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" />
+          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2 animate-logo-pulse" /> {/* Added logo-pulse animation */}
         </Link>
 
         {isMobile ? (

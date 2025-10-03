@@ -104,15 +104,16 @@
   /* Apply dark mode background specifically when html has 'dark' class */
   html.dark body {
     background-color: hsl(var(--background)); /* Fallback and base for blend */
-    background-image: 
+    background-image:
+      radial-gradient(circle at top center, hsl(var(--secondary) / 0.08) 0%, transparent 50%), /* Subtle top glow */
       linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Grid X */
       linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Grid Y */
       linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))); /* Main Gradient */
-    background-size: 40px 40px, 40px 40px, cover; /* Size for Grid X, Grid Y, Gradient */
-    background-position: 0 0, 0 0, 0 0; /* Position for each */
-    background-repeat: repeat, repeat, no-repeat; /* Repeat for grids, no-repeat for gradient */
+    background-size: 100% 100%, 40px 40px, 40px 40px, cover; /* Sizes for each layer: glow, gridX, gridY, mainGradient */
+    background-position: center top, 0 0, 0 0, 0 0; /* Positions for each layer */
+    background-repeat: no-repeat, repeat, repeat, no-repeat; /* Repeat for grids, no-repeat for others */
     background-attachment: fixed;
-    background-blend-mode: overlay, overlay, normal; /* Blend modes for each layer */
+    background-blend-mode: normal, overlay, overlay, normal; /* Blend modes for each layer */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -175,4 +176,20 @@
 /* Custom glow for cards and elements */
 .glow-shadow {
   box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.15);
+}
+
+/* New Keyframes for animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logo-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
 }

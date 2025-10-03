@@ -3,6 +3,8 @@
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Package, BarChart, ShieldCheck, Zap, TrendingUp, Users, Truck, Smartphone, Bot, Lock } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"; // Import the new hook
+import { cn } from "@/lib/utils"; // Import cn for conditional class names
 
 const features = [
   {
@@ -38,6 +40,8 @@ const features = [
 ];
 
 const FeatureGrid = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2); // Use the hook
+
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
@@ -48,9 +52,17 @@ const FeatureGrid = () => {
         {/* Removed the image div as per the new design */}
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div ref={ref} className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2"> {/* Updated card styling */}
+          <Card 
+            key={index} 
+            className={cn(
+              "bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2",
+              "opacity-0 translate-y-10", // Initial hidden state
+              isVisible && `opacity-100 translate-y-0 animate-slide-up animation-delay-${index * 100}` // Animate when visible
+            )} // Updated card styling
+            style={{ animationDelay: `${index * 100}ms` }} // Apply delay dynamically
+          >
             <CardHeader className="flex flex-col items-center text-center p-0 mb-4">
               <div className="p-4 bg-secondary/10 rounded-full mb-4 animate-pulse-hover"> {/* Updated background color */}
                 {feature.icon}
