@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10">
         {/* Top section: Header, Description, Button */}
         <div className="w-full text-center py-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-foreground">
             Fortress Inventory: Your Command Center for Inventory Excellence
           </h1>
           <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto">
