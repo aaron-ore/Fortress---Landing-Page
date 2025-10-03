@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { PlayCircle } from "lucide-react";
+import { Play } from "lucide-react"; // Import Play icon instead of PlayCircle
 import { cn } from "@/lib/utils";
 
 interface YouTubeVideoPlayerProps {
@@ -25,7 +25,10 @@ const YouTubeVideoPlayer: React.FC<YouTubeVideoPlayerProps> = ({ videoId, title 
           onClick={() => setIsPlaying(true)}
         >
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <PlayCircle className="h-20 w-20 text-accent opacity-80 group-hover:opacity-100 transition-opacity duration-300" fill="hsl(var(--accent))" />
+            {/* Custom play button: purple circle with white play triangle */}
+            <div className="h-20 w-20 rounded-full bg-accent flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+              <Play className="h-10 w-10 text-accent-foreground" /> {/* Use Play icon and white text */}
+            </div>
           </div>
           <span className="sr-only">Play video</span>
         </div>
