@@ -107,7 +107,7 @@ const PricingPage = () => {
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow flex flex-col justify-between"> {/* Updated card styling */}
+            <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow flex flex-col justify-between">
               <CardHeader className="text-center p-0 mb-6">
                 <CardTitle className="text-3xl font-bold text-primary mb-2">
                   {plan.name}
@@ -123,7 +123,7 @@ const PricingPage = () => {
                   {plan.features.map((feature, featIndex) => (
                     <li key={featIndex} className="flex items-center text-base">
                       {feature.included ? (
-                        <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> {/* Updated icon color */}
+                        <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mr-3 flex-shrink-0" />
                       )}
@@ -135,7 +135,7 @@ const PricingPage = () => {
                 </ul>
               </CardContent>
               <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow"
                 onClick={handleButtonClick}
               >
                 {plan.buttonText}
