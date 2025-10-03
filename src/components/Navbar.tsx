@@ -35,13 +35,13 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <Link to="/features" className="text-lg font-medium text-foreground hover:text-secondary transition-colors">
+      <Link to="/features" className="text-lg font-medium text-foreground hover:text-white transition-colors">
         Features
       </Link>
-      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-secondary transition-colors">
+      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-white transition-colors">
         Pricing
       </Link>
-      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-secondary transition-colors">
+      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-white transition-colors">
         About Us
       </Link>
     </>
@@ -56,7 +56,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground flex items-center">
-          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" /> {/* Removed animate-logo-pulse */}
+          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" />
         </Link>
 
         {isMobile ? (
@@ -69,17 +69,10 @@ const Navbar = () => {
               {navLinks}
             </div>
             <Button 
-              variant="ghost"
-              className="px-4 py-2 text-lg text-foreground hover:text-secondary"
+              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow" // Pill-shaped Login button
               onClick={handleLoginClick}
             >
               Login
-            </Button>
-            <Button 
-              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-md glow-shadow"
-              onClick={handleSignUpClick}
-            >
-              Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         )}
@@ -92,17 +85,10 @@ const Navbar = () => {
           </Button>
           {navLinks}
           <Button 
-            variant="ghost"
-            className="w-3/4 px-6 py-2 text-lg text-foreground hover:text-secondary"
+            className="w-3/4 px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow" // Pill-shaped Login button for mobile
             onClick={handleLoginClick}
           >
             Login
-          </Button>
-          <Button 
-            className="w-3/4 px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-md glow-shadow"
-            onClick={handleSignUpClick}
-          >
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       )}

@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center items-center text-foreground p-6 pt-32 md:pt-40 overflow-hidden" // Adjusted padding and alignment
+      className="relative min-h-screen flex flex-col justify-center items-center text-foreground p-6 pt-24 md:pt-28 overflow-hidden" // Adjusted padding
     >
       {/* No explicit background image here, relies on global gradient and grid */}
       {/* Optional: Add a subtle radial gradient or blob for depth if needed, similar to reference */}
