@@ -105,15 +105,20 @@
   html.dark body {
     background-color: hsl(var(--background)); /* Fallback and base for blend */
     background-image:
-      linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))), /* 1. Main Gradient (bottom) */
-      linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* 2. Grid X */
-      linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px), /* 3. Grid Y */
-      radial-gradient(circle at top center, hsl(var(--accent) / 0.2) 0%, transparent 50%); /* 4. More prominent top glow (top) */
-    background-size: cover, 40px 40px, 40px 40px, 100% 100%; /* Sizes: Main, GridX, GridY, Glow */
-    background-position: 0 0, 0 0, 0 0, center top; /* Positions: Main, GridX, GridY, Glow */
-    background-repeat: no-repeat, repeat, repeat, no-repeat; /* Repeat: Main, GridX, GridY, Glow */
+      /* Large, soft radial glow that moves */
+      radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(var(--accent) / 0.2) 0%, transparent 60%),
+      /* Main Gradient */
+      linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))),
+      /* Grid X */
+      linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px),
+      /* Grid Y */
+      linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px);
+    background-size: 150% 150%, cover, 40px 40px, 40px 40px; /* Larger radial gradient */
+    background-position: 50% 50%, 0 0, 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat, repeat, repeat;
     background-attachment: fixed;
-    background-blend-mode: normal, overlay, overlay, normal; /* Blend modes: Main, GridX, GridY, Glow */
+    background-blend-mode: normal, normal, overlay, overlay;
+    animation: background-shift 30s linear infinite alternate; /* New animation */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -129,60 +134,16 @@
     text-shadow: 0 0 8px hsl(var(--secondary) / 0.5), 0 0 15px hsl(var(--secondary) / 0.3); /* Blue/purple glow for headers */
   }
 
-  /* Styles for the animated blobs */
-  .blob {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 1; /* Increased opacity to 1 */
-    filter: blur(120px); /* Increased blur for a softer, larger glow */
-    animation: blob 10s infinite ease-in-out alternate; /* Use existing blob animation, adjust duration */
-  }
-
-  .blob-one {
-    background-color: hsl(var(--accent) / 0.6); /* Increased color opacity */
-    width: 600px; /* Increased size */
-    height: 600px; /* Increased size */
-    top: 5%;
-    left: 10%;
-    animation-duration: 12s;
-    animation-delay: 0s;
-  }
-
-  .blob-two {
-    background-color: hsl(var(--secondary) / 0.6); /* Increased color opacity */
-    width: 700px; /* Increased size */
-    height: 700px; /* Increased size */
-    bottom: 15%;
-    right: 5%;
-    animation-duration: 15s;
-    animation-delay: 3s;
-  }
-
-  .blob-three {
-    background-color: hsl(var(--accent) / 0.5); /* Increased color opacity */
-    width: 550px; /* Increased size */
-    height: 550px; /* Increased size */
-    top: 30%;
-    right: 15%;
-    animation-duration: 10s;
-    animation-delay: 6s;
-  }
+  /* Removed blob styles */
 }
 
-@keyframes blob {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
+@keyframes background-shift {
+  0% {
+    background-position: 0% 0%, 0 0, 0 0, 0 0;
   }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
+  100% {
+    background-position: 100% 100%, 0 0, 0 0, 0 0;
   }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
 }
 
 .animation-delay-2000 {
