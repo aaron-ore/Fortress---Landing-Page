@@ -11,6 +11,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import AboutUsPage from "./pages/AboutUsPage"; // Import the new component
 import ExitIntentPopup from "./components/ExitIntentPopup";
+import ScrollToTop from "./components/ScrollToTop"; // Import the new component
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop /> {/* Add the ScrollToTop component here */}
         <ExitIntentPopup />
         <Routes>
           <Route path="/" element={<Index />} />
