@@ -87,18 +87,6 @@
     /* New gradient colors for the body background */
     --gradient-start: 220 15% 3%; /* Even darker start */
     --gradient-end: 240 20% 7%; /* Darker purple-blue end */
-
-    /* Apply gradient background to the body when in dark mode */
-    & body {
-      background: linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
-      background-attachment: fixed;
-      /* Grid pattern overlay */
-      background-image: 
-        linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Even lower opacity */
-        linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px); /* Even lower opacity */
-      background-size: 40px 40px; /* Adjust grid size as needed */
-      background-blend-mode: overlay; /* Blend grid with gradient */
-    }
   }
 }
 
@@ -111,6 +99,17 @@
     @apply text-foreground;
     min-height: 100vh;
     width: 100%;
+  }
+
+  /* Apply dark mode background specifically when html has 'dark' class */
+  html.dark body {
+    background: linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    background-attachment: fixed;
+    background-image: 
+      linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-blend-mode: overlay;
   }
 
   h1, h2, h3, h4, h5, h6 {
