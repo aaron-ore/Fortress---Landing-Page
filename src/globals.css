@@ -45,51 +45,59 @@
   }
 
   .dark {
-    --foreground: 210 40% 98%; /* White */
+    --background: 220 15% 10%; /* Dark blue-grey */
+    --foreground: 210 40% 98%; /* Off-white for text */
 
-    --card: 140 10% 20.8%; /* #313E35 */
+    --card: 220 15% 15%; /* Slightly lighter dark for cards */
     --card-foreground: 210 40% 98%;
 
-    --popover: 140 10% 20.8%; /* #313E35 */
+    --popover: 220 15% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%; /* Changed to Off-white */
-    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text for contrast on primary background */
+    --primary: 210 40% 98%; /* Off-white for main headings */
+    --primary-foreground: 220 15% 10%; /* Dark text on primary background */
 
-    --secondary: 210 40% 98%; /* Off-white - Hero Words/Subheaders */
+    --secondary: 230 80% 60%; /* Vibrant blue/purple for accents */
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 20%; /* Muted background elements */
+    --muted-foreground: 215 10% 60%; /* Muted text */
 
-    --accent: 142.1 76.2% 36.3%; /* Vibrant Green for primary actions */
-    --accent-foreground: 222.2 47.4% 11.2%; /* This will be dark text on the accent button */
+    --accent: 230 80% 60%; /* Vibrant blue/purple for primary actions */
+    --accent-foreground: 210 40% 98%; /* White text on accent */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 15% 25%; /* Darker border */
+    --input: 220 15% 20%;
+    --ring: 230 80% 60%; /* Accent color for focus ring */
+
     --radius: 0.5rem;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 230 80% 60%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 15% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 230 80% 60%;
 
     /* New gradient colors for the body background */
-    --gradient-start: 240 10% 8%; /* Very dark blue/black */
-    --gradient-end: 265 30% 15%; /* Dark purple */
+    --gradient-start: 220 15% 8%; /* Very dark blue-grey */
+    --gradient-end: 240 20% 12%; /* Dark purple-blue */
 
     /* Apply gradient background to the body when in dark mode */
     & body {
-      background: linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
-      background-attachment: fixed; /* Ensures gradient covers full viewport even on scroll */
+      background: linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+      background-attachment: fixed;
+      /* Grid pattern overlay */
+      background-image: 
+        linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+        linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+      background-size: 40px 40px; /* Adjust grid size as needed */
+      background-blend-mode: overlay; /* Blend grid with gradient */
     }
   }
 }
@@ -101,14 +109,21 @@
 
   body {
     @apply text-foreground;
-    /* Ensure html and body take full height for gradient */
     min-height: 100vh;
     width: 100%;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary; /* Ensure headings use the primary text color */
+  }
+
   .dark h1,
-  .dark h2 {
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5); /* Thin white stroke effect for headers */
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    text-shadow: 0 0 8px hsl(var(--secondary) / 0.5), 0 0 15px hsl(var(--secondary) / 0.3); /* Blue/purple glow for headers */
   }
 }
 
@@ -153,4 +168,9 @@
 
 .animate-pulse-hover:hover {
   animation: pulse-hover 1s infinite;
+}
+
+/* Custom glow for cards and elements */
+.glow-shadow {
+  box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.15);
 }

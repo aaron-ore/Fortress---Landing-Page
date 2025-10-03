@@ -71,25 +71,25 @@ const pricingPlans = [
 
 const PricingCardSection = () => {
   return (
-    <section className="py-20 px-6 bg-background text-foreground">
+    <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Simple, Transparent Pricing</h2>
-        <p className="text-xl text-foreground max-w-3xl mx-auto">
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           Start with our free plan or choose a tier that grows with your business. No hidden fees, no surprises.
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch"> {/* Changed to 4 columns */}
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-stretch">
         {pricingPlans.map((plan, index) => (
           <Card 
             key={index} 
-            className={`bg-card/10 backdrop-blur-xl p-8 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border ${plan.highlight ? 'border-primary ring-2 ring-primary' : 'border-border/10'} hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2`}
+            className={`bg-card/50 backdrop-blur-sm p-8 rounded-xl border border-border/50 flex flex-col justify-between ${plan.highlight ? 'border-secondary ring-2 ring-secondary glow-shadow' : 'glow-shadow'} hover:glow-shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2`} // Updated card styling
           >
             <CardHeader className="text-center p-0 mb-6">
               <CardTitle className="text-3xl font-bold text-primary mb-2">
                 {plan.name}
               </CardTitle>
-              <CardDescription className="text-foreground text-lg mb-4">
+              <CardDescription className="text-muted-foreground text-lg mb-4"> {/* Updated text color */}
                 {plan.description}
               </CardDescription>
               <p className="text-5xl font-extrabold text-foreground mb-1">
@@ -107,14 +107,14 @@ const PricingCardSection = () => {
               <ul className="space-y-3 text-left">
                 {plan.features.map((feature, featIndex) => (
                   <li key={featIndex} className="flex items-center text-base text-foreground">
-                    <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> {/* Updated icon color */}
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
             <Button 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
               onClick={() => window.location.href = plan.buttonLink}
             >
               {plan.buttonText}

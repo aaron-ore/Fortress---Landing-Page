@@ -10,14 +10,14 @@ const PrivacyPolicyPage = () => {
       <Navbar />
       <main className="pt-32 pb-20 px-6 bg-transparent text-foreground">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md text-primary">
             Privacy Policy for Fortress Inventory
           </h1>
-          <p className="text-gray-400 text-sm mb-12 text-center">
+          <p className="text-muted-foreground text-sm mb-12 text-center"> {/* Updated text color */}
             Last Updated: October 1, 2025
           </p>
 
-          <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
+          <div className="prose prose-invert max-w-none text-muted-foreground space-y-6"> {/* Updated text color */}
             <p>
               This Privacy Policy describes how Fortress Inventory ("we," "us," or "our") collects, uses, and shares information in connection with your use of the Fortress Inventory web and mobile application and related services (collectively, the "Service").
             </p>
@@ -96,7 +96,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <p className="space-y-1">
               <strong>Fortress Inventory</strong><br />
-              Email: <a href="mailto:privacy@fortressinventory.com" className="text-primary hover:underline">privacy@fortressinventory.com</a><br />
+              Email: <a href="mailto:privacy@fortressinventory.com" className="text-secondary hover:underline">privacy@fortressinventory.com</a><br /> {/* Updated link color */}
               Address: Fortress Inventory 333 W 39th St. Ste 303, NY,NY 10018
             </p>
           </div>

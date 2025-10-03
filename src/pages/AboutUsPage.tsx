@@ -13,11 +13,11 @@ const AboutUsPage = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md text-primary">
             About Us: The Inventory Software That Gets It
           </h1>
-          <p className="text-muted-foreground text-sm mb-12 text-center">
+          <p className="text-muted-foreground text-sm mb-12 text-center"> {/* Updated text color */}
             Our Story: From Frustration to Fortress
           </p>
 
-          <div className="prose prose-invert max-w-none text-foreground space-y-6">
+          <div className="prose prose-invert max-w-none text-muted-foreground space-y-6"> {/* Updated text color */}
             <p>
               Every business owner knows the feeling. You're scaling your operation, things are finally humming, and then you hit the inevitable wall: inventory management. We've been there. Before Fortress Inventory, our founders weren't software developers; they were business owners just like you, juggling growing product lines, multiple warehouses, and the soul-crushing reality of their existing inventory system.
             </p>

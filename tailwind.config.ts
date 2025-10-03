@@ -92,6 +92,7 @@ export default {
       },
       boxShadow: {
         'white-glow': '0 0 15px rgba(255, 255, 255, 0.2)', // A subtle white glow
+        'glow-shadow': '0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.15)', // New blue/purple glow
       },
     },
   },

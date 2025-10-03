@@ -61,12 +61,12 @@ const ExitIntentPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-[425px] p-6 bg-black backdrop-blur-lg rounded-lg shadow-2xl border border-primary/50">
+      <DialogContent className="sm:max-w-[425px] p-6 bg-card rounded-lg shadow-2xl border border-border/50 glow-shadow"> {/* Updated styling */}
         <DialogHeader className="text-center">
-          <DialogTitle className="text-3xl font-bold text-white mb-2">
+          <DialogTitle className="text-3xl font-bold text-primary mb-2"> {/* Updated text color */}
             Wait! Don't Miss Out!
           </DialogTitle>
-          <DialogDescription className="text-foreground text-lg">
+          <DialogDescription className="text-muted-foreground text-lg"> {/* Updated text color */}
             Ready to revolutionize your inventory? Start your
             <span className="font-extrabold text-accent"> 14-day Free Trial</span> today!
           </DialogDescription>
@@ -76,7 +76,7 @@ const ExitIntentPopup = () => {
             Cancel anytime or stay on the free tier. No obligations.
           </p>
           <Button
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
+            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
             onClick={handleGetStartedClick}
           >
             Start Your Free Trial Now!

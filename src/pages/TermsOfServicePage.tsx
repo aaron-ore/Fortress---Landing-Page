@@ -10,17 +10,17 @@ const TermsOfServicePage = () => {
       <Navbar />
       <main className="pt-32 pb-20 px-6 bg-transparent text-foreground">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md text-primary">
             Fortress Inventory Terms of Service Agreement
           </h1>
-          <p className="text-gray-400 text-sm mb-2 text-center">
+          <p className="text-muted-foreground text-sm mb-2 text-center"> {/* Updated text color */}
             Effective Date: October 1, 2025
           </p>
-          <p className="text-gray-400 text-sm mb-12 text-center">
+          <p className="text-muted-foreground text-sm mb-12 text-center"> {/* Updated text color */}
             Last Updated: October 1, 2025
           </p>
 
-          <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
+          <div className="prose prose-invert max-w-none text-muted-foreground space-y-6"> {/* Updated text color */}
             <p>
               These Terms of Service ("Terms") constitute a legally binding agreement between Fortress Inventory ("Company," "we," or "our") and the individual or entity ("Customer," "you," or "your") that accesses or uses the Fortress Inventory cloud-based inventory management application and related services (collectively, the "Service").
             </p>
@@ -126,7 +126,7 @@ const TermsOfServicePage = () => {
             </p>
             <p className="space-y-1">
               <strong>Fortress Inventory</strong><br />
-              Email: <a href="mailto:support@fortressinventory.com" className="text-primary hover:underline">support@fortressinventory.com</a><br />
+              Email: <a href="mailto:support@fortressinventory.com" className="text-secondary hover:underline">support@fortressinventory.com</a><br /> {/* Updated link color */}
               Address: 333 W 39th St STE 303, New York, NY 10018
             </p>
           </div>

@@ -12,22 +12,22 @@ const featureCategories = [
     description: "Gain complete command over your stock with advanced tracking and optimization tools.",
     features: [
       {
-        icon: <Scan className="h-6 w-6 text-primary" />,
+        icon: <Scan className="h-6 w-6 text-secondary" />,
         name: "Real-time Visibility",
         details: "Know exactly what you have, where it is, and its value, at any moment, across all locations.",
       },
       {
-        icon: <Boxes className="h-6 w-6 text-primary" />,
+        icon: <Boxes className="h-6 w-6 text-secondary" />,
         name: "Smart Stock Management",
         details: "Optimize stock levels with automated reorder alerts, dedicated picking bins, and overstock management to prevent shortages and minimize waste.",
       },
       {
-        icon: <QrCode className="h-6 w-6 text-primary" />,
+        icon: <QrCode className="h-6 w-6 text-secondary" />,
         name: "Effortless Organization",
         details: "Structure your warehouse with flexible folder systems and generate scannable QR code labels for lightning-fast item identification.",
       },
       {
-        icon: <Upload className="h-6 w-6 text-primary" />,
+        icon: <Upload className="h-6 w-6 text-secondary" />,
         name: "Quick Setup & Updates",
         details: "Easily add new items with images and barcodes, or bulk import your entire inventory in minutes.",
       },
@@ -39,17 +39,17 @@ const featureCategories = [
     description: "Accelerate your order processes from creation to delivery with precision and professionalism.",
     features: [
       {
-        icon: <ClipboardCheck className="h-6 w-6 text-primary" />,
+        icon: <ClipboardCheck className="h-6 w-6 text-secondary" />,
         name: "Intuitive Order Management",
         details: "Create, track, and manage sales and purchase orders with a user-friendly interface and visual Kanban boards.",
       },
       {
-        icon: <Zap className="h-6 w-6 text-primary" />,
+        icon: <Zap className="h-6 w-6 text-secondary" />,
         name: "Accelerated Workflows",
         details: "Expedite receiving and fulfillment processes, ensuring timely deliveries and happy customers.",
       },
       {
-        icon: <FileText className="h-6 w-6 text-primary" />,
+        icon: <FileText className="h-6 w-6 text-secondary" />,
         name: "Professional Documentation",
         details: "Generate polished PDF invoices and purchase orders directly from the platform, enhancing your brand image.",
       },
@@ -61,17 +61,17 @@ const featureCategories = [
     description: "Boost your team's efficiency with powerful mobile tools for every warehouse task.",
     features: [
       {
-        icon: <Smartphone className="h-6 w-6 text-primary" />,
+        icon: <Smartphone className="h-6 w-6 text-secondary" />,
         name: "On-the-Go Efficiency",
         details: "Equip your team with mobile-first tools for rapid item lookup, receiving, putaway, picking, packing, and shipping.",
       },
       {
-        icon: <Barcode className="h-6 w-6 text-primary" />,
+        icon: <Barcode className="h-6 w-6 text-secondary" />,
         name: "Accuracy at Your Fingertips",
         details: "Conduct precise cycle counts, process returns, and manage stock transfers with integrated barcode/QR scanning.",
       },
       {
-        icon: <Route className="h-6 w-6 text-primary" />,
+        icon: <Route className="h-6 w-6 text-secondary" />,
         name: "Optimized Picking",
         details: "Batch sales orders into efficient picking waves, guiding your team through the most effective routes.",
       },
@@ -83,17 +83,17 @@ const featureCategories = [
     description: "Transform raw data into strategic decisions with comprehensive analytics and AI-powered summaries.",
     features: [
       {
-        icon: <BarChart className="h-6 w-6 text-primary" />,
+        icon: <BarChart className="h-6 w-6 text-secondary" />,
         name: "Comprehensive Dashboards",
         details: "Gain a high-level overview of your key metrics, from stock value to order fulfillment rates, at a glance.",
       },
       {
-        icon: <LineChart className="h-6 w-6 text-primary" />,
+        icon: <LineChart className="h-6 w-6 text-secondary" />,
         name: "Deep Dive Analytics",
         details: "Access detailed reports on inventory valuation, stock movement, sales performance, purchase order status, and profitability.",
       },
       {
-        icon: <Bot className="h-6 w-6 text-primary" />,
+        icon: <Bot className="h-6 w-6 text-secondary" />,
         name: "AI-Powered Summaries",
         details: "Get concise, intelligent summaries of your reports to quickly grasp key trends and make informed decisions.",
       },
@@ -105,12 +105,12 @@ const featureCategories = [
     description: "Let Fortress handle the routine, so your team can focus on strategic growth and innovation.",
     features: [
       {
-        icon: <Settings className="h-6 w-6 text-primary" />,
+        icon: <Settings className="h-6 w-6 text-secondary" />,
         name: "Custom Automation Rules",
         details: "Set up powerful rules to automate repetitive tasks, from sending low-stock notifications to automatically generating purchase orders.",
       },
       {
-        icon: <Zap className="h-6 w-6 text-primary" />,
+        icon: <Zap className="h-6 w-6 text-secondary" />,
         name: "Proactive Management",
         details: "Automate routine tasks and notifications, allowing your team to focus on strategic initiatives and business expansion.",
       },
@@ -122,17 +122,17 @@ const featureCategories = [
     description: "A robust and flexible foundation designed to protect your data and grow with your business.",
     features: [
       {
-        icon: <Users className="h-6 w-6 text-primary" />,
+        icon: <Users className="h-6 w-6 text-secondary" />,
         name: "Robust User Management",
         details: "Assign granular roles and permissions to your team, ensuring everyone has the right level of access and accountability.",
       },
       {
-        icon: <Palette className="h-6 w-6 text-primary" />,
+        icon: <Palette className="h-6 w-6 text-secondary" />,
         name: "Customizable Experience",
         details: "Tailor your workspace with personalized themes and settings to match your brand and workflow preferences.",
       },
       {
-        icon: <BookOpen className="h-6 w-6 text-primary" />,
+        icon: <BookOpen className="h-6 w-6 text-secondary" />,
         name: "Guided Onboarding",
         details: "Get up and running quickly with an intuitive setup wizard and helpful in-app tutorials, ensuring a smooth transition.",
       },
@@ -150,26 +150,26 @@ const FeaturesPage = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-primary">
             Fortress Features: Your Command Center for Inventory Excellence
           </h1>
-          <p className="text-xl text-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore the powerful capabilities of Fortress, designed to transform your inventory management, streamline operations, and drive growth.
           </p>
         </div>
 
         <div className="container mx-auto space-y-24">
           {featureCategories.map((category, catIndex) => (
-            <section key={catIndex} className="flex flex-col md:flex-row items-center justify-between gap-12 py-12 border-b border-border last:border-b-0">
+            <section key={catIndex} className="flex flex-col md:flex-row items-center justify-between gap-12 py-12 border-b border-border/30 last:border-b-0"> {/* Updated border */}
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-1' : 'md:order-2'} text-center md:text-left`}>
                 <h2 className="text-4xl font-bold mb-4 text-primary">
                   {category.title}
                 </h2>
-                <p className="text-lg text-foreground mb-8">
+                <p className="text-lg text-muted-foreground mb-8">
                   {category.description}
                 </p>
                 <div className="grid grid-cols-1 gap-6">
                   {category.features.map((feature, featIndex) => (
-                    <Card key={featIndex} className="bg-card/10 backdrop-blur-xl p-4 rounded-xl shadow-lg shadow-white-glow">
+                    <Card key={featIndex} className="bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 glow-shadow"> {/* Updated card styling */}
                       <CardHeader className="flex flex-row items-center space-x-4 p-0 mb-2">
-                        <div className="p-2 bg-primary/10 rounded-full">
+                        <div className="p-2 bg-secondary/10 rounded-full"> {/* Updated background color */}
                           {feature.icon}
                         </div>
                         <CardTitle className="text-xl font-semibold text-primary">
@@ -177,7 +177,7 @@ const FeaturesPage = () => {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="p-0 text-left">
-                        <CardDescription className="text-foreground text-base">
+                        <CardDescription className="text-muted-foreground text-base"> {/* Updated text color */}
                           {feature.details}
                         </CardDescription>
                       </CardContent>
@@ -188,7 +188,7 @@ const FeaturesPage = () => {
               <div className={`md:w-1/2 ${catIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex justify-center`}>
                 {/* Category-specific visual */}
                 {category.image ? (
-                  <div className="w-full max-w-lg bg-card/20 backdrop-blur-xl p-2 rounded-xl border border-border/10 shadow-lg shadow-white-glow flex items-center justify-center">
+                  <div className="w-full max-w-lg bg-card/20 backdrop-blur-xl p-2 rounded-xl border border-border/10 glow-shadow flex items-center justify-center"> {/* Updated styling */}
                     <img
                       src={category.image}
                       alt={`${category.title} Visual`}
@@ -196,7 +196,7 @@ const FeaturesPage = () => {
                     />
                   </div>
                 ) : (
-                  <div className="w-full max-w-lg h-64 bg-muted rounded-xl flex items-center justify-center text-muted-foreground text-xl shadow-xl shadow-white-glow">
+                  <div className="w-full max-w-lg h-64 bg-muted rounded-xl flex items-center justify-center text-muted-foreground text-xl glow-shadow"> {/* Updated styling */}
                     {category.title} Visual Placeholder
                   </div>
                 )}

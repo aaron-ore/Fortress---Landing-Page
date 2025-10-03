@@ -100,34 +100,34 @@ const PricingPage = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-primary">
             Flexible Pricing for Every Business
           </h1>
-          <p className="text-xl text-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Choose the plan that best fits your inventory management needs, from startups to large enterprises.
           </p>
         </div>
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className="bg-card/10 backdrop-blur-xl p-6 rounded-xl shadow-lg shadow-white-glow flex flex-col justify-between border border-border/10">
+            <Card key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-border/50 glow-shadow flex flex-col justify-between"> {/* Updated card styling */}
               <CardHeader className="text-center p-0 mb-6">
                 <CardTitle className="text-3xl font-bold text-primary mb-2">
                   {plan.name}
                 </CardTitle>
-                <CardDescription className="text-foreground text-4xl font-extrabold mb-1"> {/* Increased font size and boldness */}
+                <CardDescription className="text-foreground text-4xl font-extrabold mb-1">
                   {plan.monthlyCost}
                 </CardDescription>
                 <p className="text-muted-foreground text-sm mt-1">{plan.inventoryLimit}</p>
-                <p className="text-muted-foreground text-sm">{plan.userLimit}</p> {/* Display user limit */}
+                <p className="text-muted-foreground text-sm">{plan.userLimit}</p>
               </CardHeader>
               <CardContent className="p-0 flex-grow mb-8">
                 <ul className="space-y-3 text-left">
                   {plan.features.map((feature, featIndex) => (
                     <li key={featIndex} className="flex items-center text-base">
                       {feature.included ? (
-                        <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> {/* Updated icon color */}
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mr-3 flex-shrink-0" />
                       )}
-                      <span className={feature.included ? "text-foreground" : "text-muted-foreground line-through"}>
+                      <span className={feature.included ? "text-foreground" : "text-muted-foreground"}>
                         {feature.name}
                       </span>
                     </li>
@@ -135,7 +135,7 @@ const PricingPage = () => {
                 </ul>
               </CardContent>
               <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out"
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
                 onClick={handleButtonClick}
               >
                 {plan.buttonText}
