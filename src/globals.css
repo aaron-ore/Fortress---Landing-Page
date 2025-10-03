@@ -103,13 +103,16 @@
 
   /* Apply dark mode background specifically when html has 'dark' class */
   html.dark body {
-    background: linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
-    background-attachment: fixed;
+    background-color: hsl(var(--background)); /* Fallback and base for blend */
     background-image: 
-      linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-blend-mode: overlay;
+      linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Grid X */
+      linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px), /* Grid Y */
+      linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))); /* Main Gradient */
+    background-size: 40px 40px, 40px 40px, cover; /* Size for Grid X, Grid Y, Gradient */
+    background-position: 0 0, 0 0, 0 0; /* Position for each */
+    background-repeat: repeat, repeat, no-repeat; /* Repeat for grids, no-repeat for gradient */
+    background-attachment: fixed;
+    background-blend-mode: overlay, overlay, normal; /* Blend modes for each layer */
   }
 
   h1, h2, h3, h4, h5, h6 {
