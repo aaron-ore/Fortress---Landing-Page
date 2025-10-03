@@ -3,8 +3,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowRight } from "lucide-react"; // Removed Search icon, added ArrowRight
+import { Menu, X, ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils"; // Import cn for conditional class names
 
 const Navbar = () => {
   const isMobile = useIsMobile();
@@ -46,14 +47,16 @@ const Navbar = () => {
     </>
   );
 
-  // Navbar is now full width and fixed at the top, not floating
-  const navbarClasses = `fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b border-border/50 transition-all duration-300 ease-in-out py-4 px-6 md:px-10`;
-
   return (
-    <nav className={navbarClasses}>
+    <nav
+      className={cn(
+        "sticky top-4 z-50 mx-auto rounded-full bg-background/50 backdrop-blur-lg border border-border/50 transition-all duration-300 ease-in-out py-3 px-6 md:px-10",
+        isScrolled ? "max-w-5xl" : "max-w-7xl"
+      )}
+    >
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-foreground flex items-center">
-          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2 animate-logo-pulse" /> {/* Added logo-pulse animation */}
+          <img src="/fortress-logo.png" alt="Fortress Logo" className="h-8 mr-2" /> {/* Removed animate-logo-pulse */}
         </Link>
 
         {isMobile ? (
@@ -66,14 +69,14 @@ const Navbar = () => {
               {navLinks}
             </div>
             <Button 
-              variant="ghost" // Login as a ghost button/text link
+              variant="ghost"
               className="px-4 py-2 text-lg text-foreground hover:text-secondary"
               onClick={handleLoginClick}
             >
               Login
             </Button>
             <Button 
-              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-md glow-shadow" // Filled button with glow
+              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-md glow-shadow"
               onClick={handleSignUpClick}
             >
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -83,7 +86,10 @@ const Navbar = () => {
       </div>
 
       {isMobile && isOpen && (
-        <div className="absolute top-full left-0 w-full bg-background/90 border-b border-border/40 flex flex-col items-center space-y-4 py-6 animate-accordion-down">
+        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 py-6 animate-accordion-down">
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-foreground">
+            <X className="h-8 w-8" />
+          </Button>
           {navLinks}
           <Button 
             variant="ghost"
