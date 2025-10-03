@@ -25,7 +25,7 @@ const YouTubeVideoPlayer: React.FC<YouTubeVideoPlayerProps> = ({ videoId, title 
           onClick={() => setIsPlaying(true)}
         >
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <PlayCircle className="h-20 w-20 text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300" fill="white" />
+            <PlayCircle className="h-20 w-20 text-accent opacity-80 group-hover:opacity-100 transition-opacity duration-300" fill="hsl(var(--accent))" />
           </div>
           <span className="sr-only">Play video</span>
         </div>
