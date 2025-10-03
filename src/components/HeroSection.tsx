@@ -12,7 +12,8 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-between text-foreground p-6 pt-24 md:pt-32 overflow-hidden bg-transparent" // Removed inline style and added bg-transparent
+      className="relative min-h-screen flex flex-col justify-between text-foreground p-6 pt-24 md:pt-32 overflow-hidden"
+      style={{ backgroundImage: `url('/city-lights-bokeh.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       {/* Dark overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
