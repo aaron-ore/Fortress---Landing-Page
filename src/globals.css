@@ -106,7 +106,7 @@
     background-color: hsl(var(--background)); /* Fallback and base for blend */
     background-image:
       /* Large, soft radial glow that moves */
-      radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(var(--accent) / 0.2) 0%, transparent 60%),
+      radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(var(--accent) / 0.1) 0%, transparent 60%), /* Reduced opacity */
       /* Main Gradient */
       linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))),
       /* Grid X */
@@ -131,7 +131,7 @@
   .dark h4,
   .dark h5,
   .dark h6 {
-    text-shadow: 0 0 8px hsl(var(--secondary) / 0.5), 0 0 15px hsl(var(--secondary) / 0.3); /* Blue/purple glow for headers */
+    text-shadow: 0 0 5px hsl(var(--secondary) / 0.3), 0 0 10px hsl(var(--secondary) / 0.15); /* Reduced spread and opacity */
   }
 
   /* Removed blob styles */
@@ -172,5 +172,5 @@
 
 /* Custom glow for cards and elements */
 .glow-shadow {
-  box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.15);
+  box-shadow: 0 0 10px hsl(var(--secondary) / 0.2), 0 0 20px hsl(var(--secondary) / 0.1); /* Reduced spread and opacity */
 }
