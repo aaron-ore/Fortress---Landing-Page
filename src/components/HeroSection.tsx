@@ -14,10 +14,7 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex flex-col justify-center items-center text-foreground p-6 pt-16 md:pt-20 overflow-hidden" // Adjusted padding
     >
-      {/* No explicit background image here, relies on global gradient and grid */}
-      {/* Optional: Add a subtle radial gradient or blob for depth if needed, similar to reference */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background/20 to-transparent z-0"></div>
-
+      {/* Removed the absolute inset-0 bg-gradient-to-br div */}
 
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10 text-center">
         {/* Top section: Header, Description, YouTube Video, Button */}

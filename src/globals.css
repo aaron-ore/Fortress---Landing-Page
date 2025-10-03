@@ -133,15 +133,15 @@
   .blob {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.9; /* Increased opacity for better visibility */
-    filter: blur(100px); /* Increased blur for a softer, larger glow */
+    opacity: 1; /* Increased opacity to 1 */
+    filter: blur(120px); /* Increased blur for a softer, larger glow */
     animation: blob 10s infinite ease-in-out alternate; /* Use existing blob animation, adjust duration */
   }
 
   .blob-one {
-    background-color: hsl(var(--accent) / 0.4); /* Use accent color with opacity */
-    width: 500px; /* Increased size */
-    height: 500px; /* Increased size */
+    background-color: hsl(var(--accent) / 0.6); /* Increased color opacity */
+    width: 600px; /* Increased size */
+    height: 600px; /* Increased size */
     top: 5%;
     left: 10%;
     animation-duration: 12s;
@@ -149,9 +149,9 @@
   }
 
   .blob-two {
-    background-color: hsl(var(--secondary) / 0.4); /* Use secondary color with opacity */
-    width: 600px; /* Increased size */
-    height: 600px; /* Increased size */
+    background-color: hsl(var(--secondary) / 0.6); /* Increased color opacity */
+    width: 700px; /* Increased size */
+    height: 700px; /* Increased size */
     bottom: 15%;
     right: 5%;
     animation-duration: 15s;
@@ -159,9 +159,9 @@
   }
 
   .blob-three {
-    background-color: hsl(var(--accent) / 0.3); /* Another accent blob */
-    width: 450px; /* Increased size */
-    height: 450px; /* Increased size */
+    background-color: hsl(var(--accent) / 0.5); /* Increased color opacity */
+    width: 550px; /* Increased size */
+    height: 550px; /* Increased size */
     top: 30%;
     right: 15%;
     animation-duration: 10s;
