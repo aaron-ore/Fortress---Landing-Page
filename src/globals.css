@@ -128,10 +128,49 @@
   .dark h6 {
     text-shadow: 0 0 8px hsl(var(--secondary) / 0.5), 0 0 15px hsl(var(--secondary) / 0.3); /* Blue/purple glow for headers */
   }
+
+  /* Styles for the animated blobs */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6; /* Adjust opacity for softness */
+    filter: blur(80px); /* Soft blur effect */
+    animation: blob 10s infinite ease-in-out alternate; /* Use existing blob animation, adjust duration */
+  }
+
+  .blob-one {
+    background-color: hsl(var(--accent) / 0.4); /* Use accent color with opacity */
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+  }
+
+  .blob-two {
+    background-color: hsl(var(--secondary) / 0.4); /* Use secondary color with opacity */
+    width: 400px;
+    height: 400px;
+    bottom: 20%;
+    right: 10%;
+    animation-duration: 15s;
+    animation-delay: 3s;
+  }
+
+  .blob-three {
+    background-color: hsl(var(--accent) / 0.3); /* Another accent blob */
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    right: 20%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+  }
 }
 
 @keyframes blob {
-  0% {
+  0%, 100% {
     transform: translate(0px, 0px) scale(1);
   }
   33% {
@@ -139,9 +178,6 @@
   }
   66% {
     transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
   }
 }
 
