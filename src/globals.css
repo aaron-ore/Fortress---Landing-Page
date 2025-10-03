@@ -57,7 +57,7 @@
     --primary: 210 40% 98%; /* Off-white for main headings */
     --primary-foreground: 220 15% 10%; /* Dark text on primary background */
 
-    --secondary: 230 80% 60%; /* Vibrant blue/purple for accents */
+    --secondary: 260 80% 60%; /* Vibrant purple for accents - Adjusted hue */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 220 15% 20%; /* Muted background elements */
