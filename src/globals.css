@@ -45,7 +45,6 @@
   }
 
   .dark {
-    --background: 240 10% 8%; /* Fallback if gradient fails, but primarily for other elements */
     --foreground: 210 40% 98%; /* White */
 
     --card: 140 10% 20.8%; /* #313E35 */
@@ -54,8 +53,8 @@
     --popover: 140 10% 20.8%; /* #313E35 */
     --popover-foreground: 210 40% 98%;
 
-    --primary: 9 54% 44.7%; /* #B04B34 - Feature/header titles */
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 40% 98%; /* Changed to Off-white */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text for contrast on primary background */
 
     --secondary: 210 40% 98%; /* Off-white - Hero Words/Subheaders */
     --secondary-foreground: 210 40% 98%;
