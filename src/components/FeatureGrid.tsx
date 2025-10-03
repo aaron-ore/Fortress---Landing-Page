@@ -42,9 +42,19 @@ const FeatureGrid = () => {
     <section className="py-20 px-6 bg-background text-foreground">
       <div className="container mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Unlock Your Inventory's Full Potential</h2>
-        <p className="text-xl text-foreground max-w-3xl mx-auto">
+        <p className="text-xl text-foreground max-w-3xl mx-auto mb-8"> {/* Added mb-8 for spacing */}
           Fortress provides the tools you need to manage your inventory with precision and confidence.
         </p>
+        {/* Moved image here */}
+        <div className="w-full flex justify-center relative mb-16"> {/* Added mb-16 for spacing */}
+          <div className="w-full max-w-5xl bg-card/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
+            <img
+              src="/hero-dashboard.png"
+              alt="Fortress Inventory Dashboard"
+              className="w-full h-auto rounded-lg object-contain"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

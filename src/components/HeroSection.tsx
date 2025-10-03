@@ -3,6 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import YouTubeVideoPlayer from "./YouTubeVideoPlayer"; // Import the new component
 
 const HeroSection = () => {
   const handleGetStartedClick = () => {
@@ -40,14 +41,10 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Bottom section: Image wrapped in a glass card */}
+        {/* Bottom section: YouTube Video Player */}
         <div className="w-full flex justify-center relative">
           <div className="w-full max-w-5xl bg-card/20 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-            <img
-              src="/hero-dashboard.png"
-              alt="Fortress Inventory Dashboard"
-              className="w-full h-auto rounded-lg object-contain"
-            />
+            <YouTubeVideoPlayer videoId="BbjYgTiS9HA" title="Fortress Inventory Overview" />
           </div>
         </div>
       </div>
