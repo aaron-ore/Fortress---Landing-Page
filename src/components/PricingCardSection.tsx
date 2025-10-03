@@ -114,7 +114,7 @@ const PricingCardSection = () => {
               </ul>
             </CardContent>
             <Button 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-md transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
               onClick={() => window.location.href = plan.buttonLink}
             >
               {plan.buttonText}

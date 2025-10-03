@@ -20,7 +20,7 @@ const HeroSection = () => {
         {/* Top section: Header, Description, YouTube Video, Button */}
         <div className="w-full py-12">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md max-w-4xl mx-auto text-primary animate-fade-in"> {/* Added animation */}
-            Let Fortress Inventory <br className="hidden sm:inline"/> Streamline Your Operations
+            Fortress Inventory: <br className="hidden sm:inline"/> Master Your Inventory. Maximize Your Profit.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-200"> {/* Added animation and delay */}
             Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
@@ -33,7 +33,7 @@ const HeroSection = () => {
 
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-md shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow animate-slide-up animation-delay-600" // Added animation and delay
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow animate-slide-up animation-delay-600" // Added animation and delay
             onClick={handleGetStartedClick}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
