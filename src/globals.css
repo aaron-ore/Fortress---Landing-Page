@@ -107,7 +107,7 @@
     background-color: hsl(var(--background)); /* Fallback and base for blend */
     background-image:
       /* Large, soft radial glow that moves */
-      radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(var(--accent) / 0.1) 0%, transparent 60%), /* Reduced opacity */
+      radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(var(--accent) / 0.3) 0%, transparent 60%), /* Increased opacity to 0.3 */
       /* Main Gradient */
       linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end))),
       /* Grid X */
