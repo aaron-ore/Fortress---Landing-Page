@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
       {isMobile && isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 pt-24 z-[999] animate-accordion-down"> {/* Increased z-index and top padding */}
+        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-start space-y-8 pt-32 z-[999] animate-fade-in"> {/* Changed animation, adjusted justify, and increased top padding */}
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-foreground">
             <X className="h-8 w-8" />
           </Button>
