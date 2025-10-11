@@ -6,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils"; // Import cn for conditional class names
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"; // Import Sheet components
 
 const Navbar = () => {
   const isMobile = useIsMobile();
@@ -29,19 +34,15 @@ const Navbar = () => {
     window.location.href = "https://app.fortressinventory.com";
   };
 
-  const handleSignUpClick = () => {
-    window.location.href = "https://app.fortressinventory.com/signup";
-  };
-
   const navLinks = (
     <>
-      <Link to="/features" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
+      <Link to="/features" className="text-lg font-medium text-foreground hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>
         Features
       </Link>
-      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
+      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>
         Pricing
       </Link>
-      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
+      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>
         About Us
       </Link>
     </>
@@ -51,7 +52,7 @@ const Navbar = () => {
     <nav
       className={cn(
         "sticky top-4 z-50 mx-auto rounded-full bg-background/50 backdrop-blur-lg border border-border/50 transition-all duration-300 ease-in-out py-3 px-6 md:px-10",
-        isScrolled ? "max-w-5xl shadow-xl" : "max-w-7xl" // Added shadow-xl when scrolled
+        isScrolled ? "max-w-5xl shadow-xl" : "max-w-7xl"
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -60,16 +61,29 @@ const Navbar = () => {
         </Link>
 
         {isMobile ? (
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-foreground">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="text-foreground">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-background/90 backdrop-blur-lg flex flex-col items-center justify-start space-y-8 pt-20">
+              {navLinks}
+              <Button 
+                className="w-3/4 px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow"
+                onClick={handleLoginClick}
+              >
+                Login
+              </Button>
+            </SheetContent>
+          </Sheet>
         ) : (
           <div className="flex items-center space-x-8">
             <div className="flex space-x-6">
               {navLinks}
             </div>
             <Button 
-              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow" // Pill-shaped Login button
+              className="px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow"
               onClick={handleLoginClick}
             >
               Login
@@ -77,21 +91,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
-      {isMobile && isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-start space-y-8 pt-32 z-[999] animate-fade-in"> {/* Changed animation, adjusted justify, and increased top padding */}
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-foreground">
-            <X className="h-8 w-8" />
-          </Button>
-          {navLinks}
-          <Button 
-            className="w-3/4 px-6 py-2 text-lg bg-accent hover:bg-accent/90 text-accent-foreground rounded-full glow-shadow" // Pill-shaped Login button for mobile
-            onClick={handleLoginClick}
-          >
-            Login
-          </Button>
-        </div>
-      )}
     </nav>
   );
 };
