@@ -35,13 +35,13 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <Link to="/features" className="text-lg font-medium text-foreground hover:text-white transition-colors">
+      <Link to="/features" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
         Features
       </Link>
-      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-white transition-colors">
+      <Link to="/pricing" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
         Pricing
       </Link>
-      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-white transition-colors">
+      <Link to="/about-us" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
         About Us
       </Link>
     </>
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
       {isMobile && isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 py-6 animate-accordion-down">
+        <div className="fixed top-0 left-0 w-full h-full bg-background/90 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 pt-24 z-[999] animate-accordion-down"> {/* Increased z-index and top padding */}
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-foreground">
             <X className="h-8 w-8" />
           </Button>
