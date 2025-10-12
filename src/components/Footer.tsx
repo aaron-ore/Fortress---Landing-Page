@@ -11,6 +11,7 @@ const Footer = () => {
         <div className="flex space-x-6 items-center">
           <a href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</a> {/* Updated hover color */}
           <a href="/terms" className="hover:text-secondary transition-colors">Terms of Service</a> {/* Updated hover color */}
+          <a href="mailto:support@fortressinventory.com" className="hover:text-secondary transition-colors">support@fortressinventory.com</a> {/* Added support email */}
         </div>
       </div>
     </footer>

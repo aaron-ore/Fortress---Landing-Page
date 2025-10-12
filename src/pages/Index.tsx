@@ -8,6 +8,7 @@ import InventoryControlShowcase from '@/components/InventoryControlShowcase';
 import InsightsReportingShowcase from '@/components/InsightsReportingShowcase';
 import PricingCardSection from '@/components/PricingCardSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import FAQSection from '@/components/FAQSection'; // Import the new FAQSection
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
         <InsightsReportingShowcase />
         <PricingCardSection />
         <WhyChooseUs />
+        <FAQSection /> {/* Add the FAQSection here */}
       </main>
       <Footer />
     </div>
