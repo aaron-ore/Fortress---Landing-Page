@@ -34,14 +34,14 @@ const HeroSection = () => {
             "opacity-0 translate-y-10", // Initial hidden state
             "animate-slide-in-from-bottom" // Apply new animation
           )}>
-            Fortress Inventory: <br className="hidden sm:inline"/> Master Your Inventory. Maximize Your Profit.
+            Stop Guessing, Start Growing: Optimize Your Inventory, Orders & Warehouse in Real-Time with Fortress.
           </h1>
           <p className={cn(
             "text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto",
             "opacity-0 translate-y-10", // Initial hidden state
             "animate-slide-in-from-bottom animation-delay-200" // Apply new animation with delay
           )}>
-            Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
+            Tired of inventory chaos? Losing sales due to inaccurate stock counts? Spending hours on manual data entry? Gain crystal-clear visibility, eliminate errors, and boost fulfillment speed across your entire supply chain.
           </p>
           
           <div className={cn(
@@ -61,7 +61,7 @@ const HeroSection = () => {
             )}
             onClick={handleGetStartedClick}
           >
-            Get Started <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            Start Your Free 14-Day Trial <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </div>
 

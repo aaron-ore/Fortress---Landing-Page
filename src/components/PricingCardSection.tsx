@@ -34,7 +34,7 @@ const pricingPlans = [
       "Advanced Reporting",
       "Basic Integrations (Coming Soon)",
     ],
-    buttonText: "14 days Free Trial",
+    buttonText: "Start Your Free 14-Day Trial",
     buttonLink: "https://app.fortressinventory.com", // Link to the full pricing page
     highlight: false,
   },
@@ -50,7 +50,7 @@ const pricingPlans = [
       "QuickBooks Integration (Coming Soon)",
       "Shopify Integration (Coming Soon)",
     ],
-    buttonText: "14 days Free Trial",
+    buttonText: "Start Your Free 14-Day Trial",
     buttonLink: "https://app.fortressinventory.com",
     highlight: false,
   },
@@ -124,7 +124,7 @@ const PricingCardSection = () => {
               </ul>
             </CardContent>
             <Button 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out glow-shadow" // Updated button styling
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-6 py-3 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow" // Updated button styling
               onClick={() => window.location.href = plan.buttonLink}
             >
               {plan.buttonText}

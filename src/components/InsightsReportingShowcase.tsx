@@ -17,9 +17,9 @@ const InsightsReportingShowcase = () => {
           "opacity-0 translate-y-10",
           isVisible && "animate-slide-in-from-bottom animation-delay-100"
         )}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Actionable Insights & Smart Reporting</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Make Smarter Decisions, Faster: Actionable Insights & AI Reporting</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Access comprehensive dashboards, deep-dive analytics, and AI-powered summaries to quickly grasp trends and make informed, strategic decisions.
+            Transform complex data into clear opportunities. Our comprehensive dashboards, deep-dive analytics, and AI-powered summaries cut through the noise, allowing you to quickly grasp trends and make informed, strategic decisions that drive growth.
           </p>
         </div>
         <div ref={ref} className={cn(

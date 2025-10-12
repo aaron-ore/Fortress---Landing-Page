@@ -10,17 +10,17 @@ const reasons = [
   {
     icon: <Award className="h-8 w-8 text-secondary" />, // Changed icon color
     title: "Unmatched Precision & Control",
-    description: "Say goodbye to guesswork. Fortress provides real-time, granular visibility into every item, ensuring you always know what you have, where it is, and its exact value. Our customers love the peace of mind that comes with perfect stock accuracy.",
+    description: "Eliminate costly guesswork. Fortress delivers real-time, granular visibility into every item, ensuring you always know what you have, where it is, and its exact value. This precision means peace of mind and perfect stock accuracy, every time.",
   },
   {
     icon: <Heart className="h-8 w-8 text-secondary" />, // Changed icon color
     title: "Designed for Your Success",
-    description: "We built Fortress with businesses like yours in mind. Our intuitive interface and powerful features are crafted to simplify complex inventory tasks, making your daily operations smoother and more efficient. Our users consistently praise how easy it is to get started and see immediate results.",
+    description: "Software that works for you, not against you. Built for businesses like yours, Fortress features an intuitive interface and powerful tools that simplify complex inventory tasks, making your daily operations smoother, more efficient, and delivering immediate results.",
   },
   {
     icon: <TrendingUp className="h-8 w-8 text-secondary" />, // Changed icon color
     title: "Drive Growth, Not Just Manage Stock",
-    description: "Fortress isn't just about counting items; it's about empowering your business. With smart reorder alerts, actionable insights, and AI-powered reporting, we help you optimize purchasing, reduce waste, and identify growth opportunities. Our clients report significant improvements in profitability and operational efficiency.",
+    description: "Beyond tracking, we drive your growth. Fortress empowers your business with smart reorder alerts, actionable insights, and AI-powered reporting, helping you optimize purchasing, drastically reduce waste, and uncover new growth opportunities for improved profitability.",
   },
   {
     icon: <ShieldCheck className="h-8 w-8 text-secondary" />, // Changed icon color
@@ -45,9 +45,9 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Why Choose Fortress Inventory?</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Why Businesses Thrive with Fortress Inventory</h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          We're more than just an inventory system; we're your partner in operational excellence. Discover why businesses trust Fortress to transform their inventory management.
+          Beyond software, we're your strategic partner. Discover how Fortress Inventory empowers businesses to overcome challenges, achieve operational excellence, and secure their future.
         </p>
       </div>
 

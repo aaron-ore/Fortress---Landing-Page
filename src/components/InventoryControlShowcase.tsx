@@ -17,9 +17,9 @@ const InventoryControlShowcase = () => {
           "opacity-0 translate-y-10",
           isVisible && "animate-slide-in-from-bottom animation-delay-100"
         )}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Intelligent Inventory Control</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Eliminate Stockouts & Overstock: Intelligent Inventory Control</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Gain real-time visibility and smart stock management with automated reorder alerts, dedicated picking bins, and effortless organization to prevent waste and shortages.
+            Stop losing money to inaccurate stock. Our intelligent system provides real-time visibility, automated reorder alerts, and optimized picking bins, ensuring you always have the right stock at the right time, preventing waste and maximizing profit.
           </p>
         </div>
         <div ref={ref} className={cn(
