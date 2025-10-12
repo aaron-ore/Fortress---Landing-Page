@@ -24,5 +24,13 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <!-- Amplitude Analytics Script -->
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+    <script>
+      window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+      window.amplitude.init('214ec852f47384c695b31dbb07c0d561', {"autocapture":{"elementInteractions":true}});
+    </script>
+    <!-- End Amplitude Analytics Script -->
   </body>
 </html>
