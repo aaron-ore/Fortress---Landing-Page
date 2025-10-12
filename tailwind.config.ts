@@ -105,6 +105,16 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "hero-glow-move-1": {
+          "0%": { transform: "translate(-20%, -20%) scale(1)" },
+          "50%": { transform: "translate(0%, 0%) scale(1.05)" },
+          "100%": { transform: "translate(-20%, -20%) scale(1)" },
+        },
+        "hero-glow-move-2": {
+          "0%": { transform: "translate(20%, 20%) scale(1)" },
+          "50%": { transform: "translate(0%, 0%) scale(1.05)" },
+          "100%": { transform: "translate(20%, 20%) scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -114,6 +124,8 @@ export default {
         "logo-pulse": "logo-pulse 2s infinite ease-in-out",
         "slide-in-from-bottom": "slide-in-from-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
         "fade-in-scale": "fade-in-scale 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
+        "hero-glow-1": "hero-glow-move-1 20s ease-in-out infinite alternate",
+        "hero-glow-2": "hero-glow-move-2 25s ease-in-out infinite alternate-reverse",
       },
       boxShadow: {
         'white-glow': '0 0 15px rgba(255, 255, 255, 0.2)', // A subtle white glow

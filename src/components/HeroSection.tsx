@@ -15,6 +15,18 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex flex-col justify-center items-center text-foreground p-6 pt-16 md:pt-20 overflow-hidden" // Adjusted padding
     >
+      {/* Ambient Glow Effect */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div 
+          className="absolute w-[800px] h-[800px] rounded-full bg-accent/20 blur-3xl opacity-50 animate-hero-glow-1" 
+          style={{ top: '10%', left: '10%' }}
+        ></div>
+        <div 
+          className="absolute w-[600px] h-[600px] rounded-full bg-secondary/20 blur-3xl opacity-50 animate-hero-glow-2" 
+          style={{ bottom: '15%', right: '15%' }}
+        ></div>
+      </div>
+
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 flex-grow relative z-10 text-center">
         <div className="w-full py-12">
           <h1 className={cn(
