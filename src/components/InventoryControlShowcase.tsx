@@ -5,9 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Package, Scan } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button"; // Import Button
+import { ArrowRight } from "lucide-react"; // Import ArrowRight
 
 const InventoryControlShowcase = () => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
+
+  const handleGetStartedClick = () => {
+    window.location.href = "https://app.fortressinventory.com";
+  };
 
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
@@ -21,6 +27,17 @@ const InventoryControlShowcase = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Stop losing money to inaccurate stock. Our intelligent system provides real-time visibility, automated reorder alerts, and optimized picking bins, ensuring you always have the right stock at the right time, preventing waste and maximizing profit.
           </p>
+          <Button
+            size="lg"
+            className={cn(
+              "bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow",
+              "opacity-0 translate-y-10", // Initial hidden state
+              isVisible && "animate-slide-in-from-bottom animation-delay-400" // Animate when visible
+            )}
+            onClick={handleGetStartedClick}
+          >
+            Start Your Free 14-Day Trial <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </Button>
         </div>
         <div ref={ref} className={cn(
           "md:w-1/2 flex justify-center md:justify-end",

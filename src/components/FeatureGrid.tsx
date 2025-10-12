@@ -5,6 +5,8 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Package, BarChart, ShieldCheck, Zap, TrendingUp, Users, Truck, Smartphone, Bot, Lock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"; // Import the new hook
 import { cn } from "@/lib/utils"; // Import cn for conditional class names
+import { Button } from "@/components/ui/button"; // Import Button
+import { ArrowRight } from "lucide-react"; // Import ArrowRight
 
 const features = [
   {
@@ -42,6 +44,10 @@ const features = [
 const FeatureGrid = () => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2); // Use the hook
 
+  const handleGetStartedClick = () => {
+    window.location.href = "https://app.fortressinventory.com";
+  };
+
   return (
     <section className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
@@ -75,6 +81,20 @@ const FeatureGrid = () => {
             </CardHeader>
           </Card>
         ))}
+      </div>
+
+      <div className="container mx-auto text-center mt-16">
+        <Button
+          size="lg"
+          className={cn(
+            "bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group glow-shadow",
+            "opacity-0 translate-y-10", // Initial hidden state
+            isVisible && "animate-slide-in-from-bottom animation-delay-700" // Animate when visible
+          )}
+          onClick={handleGetStartedClick}
+        >
+          Start Your Free 14-Day Trial <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+        </Button>
       </div>
     </section>
   );
