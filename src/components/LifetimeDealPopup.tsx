@@ -54,9 +54,8 @@ const LifetimeDealPopup = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-[450px] p-8 bg-card rounded-lg shadow-2xl border border-border/50 glow-shadow relative overflow-hidden">
-        {/* Background gradient/glow for premium feel */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-secondary/10 to-accent/10 opacity-50 blur-xl"></div>
+      <DialogContent className="bg-card p-8"> {/* Simplified styling for debugging */}
+        {/* Removed the inner background gradient for testing */}
 
         <DialogHeader className="text-center">
           <Tag className="h-12 w-12 text-accent mx-auto mb-4 animate-pulse-hover" />
