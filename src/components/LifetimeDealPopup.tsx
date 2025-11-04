@@ -13,7 +13,6 @@ import { cn } from "@/lib/utils";
 import { Tag, Clock } from "lucide-react"; // Icons for visual appeal
 
 const LIFETIME_DEAL_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
-const SCROLL_TRIGGER_PERCENTAGE = 0.6; // Trigger after scrolling 60% down the page
 
 const LifetimeDealPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,12 +34,13 @@ const LifetimeDealPopup = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const documentHeight = document.body.scrollHeight - window.innerHeight;
-      const scrolledPercentage = documentHeight > 0 ? scrollY / documentHeight : 0;
-
-      if (scrolledPercentage > SCROLL_TRIGGER_PERCENTAGE && !isOpen) {
-        showPopup();
+      const featureGridSection = document.getElementById("feature-grid-section");
+      if (featureGridSection && !isOpen) {
+        const rect = featureGridSection.getBoundingClientRect();
+        // Trigger when the top of the feature grid section is halfway up the viewport
+        if (rect.top < window.innerHeight / 2) {
+          showPopup();
+        }
       }
     };
 

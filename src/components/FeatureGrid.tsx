@@ -49,7 +49,7 @@ const FeatureGrid = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-transparent text-foreground">
+    <section id="feature-grid-section" className="py-20 px-6 bg-transparent text-foreground">
       <div className="container mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Transform Your Operations. See Real Results.</h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
