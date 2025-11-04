@@ -12,21 +12,23 @@ import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const POPUP_COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 hours
-const MOBILE_TRIGGER_DELAY_MS = 15 * 1000; // 15 seconds
+const LIFETIME_DEAL_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000; // 7 days for lifetime deal
 
 const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  const hasShownPopupRecently = useCallback(() => {
-    const lastShown = localStorage.getItem("exitIntentLastShown");
+  const hasShownPopupRecently = useCallback((key: string, cooldown: number) => {
+    const lastShown = localStorage.getItem(key);
     if (!lastShown) return false;
     const lastShownTime = parseInt(lastShown, 10);
-    return Date.now() - lastShownTime < POPUP_COOLDOWN_MS;
+    return Date.now() - lastShownTime < cooldown;
   }, []);
 
   const showPopup = useCallback(() => {
-    if (!hasShownPopupRecently()) {
+    // Only show if neither this popup nor the lifetime deal popup has been shown recently
+    if (!hasShownPopupRecently("exitIntentLastShown", POPUP_COOLDOWN_MS) &&
+        !hasShownPopupRecently("lifetimeDealLastShown", LIFETIME_DEAL_COOLDOWN_MS)) {
       setIsOpen(true);
       localStorage.setItem("exitIntentLastShown", Date.now().toString());
     }
@@ -34,7 +36,8 @@ const ExitIntentPopup = () => {
 
   const handleMouseLeave = useCallback(
     (event: MouseEvent) => {
-      if (!isMobile && event.clientY < 10) { // Detects if mouse leaves top of viewport
+      // Only trigger on desktop when mouse leaves the top of the viewport
+      if (!isMobile && event.clientY < 10) {
         showPopup();
       }
     },
@@ -44,11 +47,8 @@ const ExitIntentPopup = () => {
   useEffect(() => {
     if (!isMobile) {
       document.addEventListener("mouseleave", handleMouseLeave);
-    } else {
-      // For mobile, trigger after a delay
-      const timer = setTimeout(showPopup, MOBILE_TRIGGER_DELAY_MS);
-      return () => clearTimeout(timer);
     }
+    // Removed mobile delay trigger as per user request for strict exit-intent
 
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);

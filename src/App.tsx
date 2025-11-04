@@ -9,9 +9,10 @@ import FeaturesPage from "./pages/FeaturesPage";
 import PricingPage from "./pages/PricingPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
-import AboutUsPage from "./pages/AboutUsPage"; // Import the new component
+import AboutUsPage from "./pages/AboutUsPage";
 import ExitIntentPopup from "./components/ExitIntentPopup";
-import ScrollToTop from "./components/ScrollToTop"; // Import the new component
+import LifetimeDealPopup from "./components/LifetimeDealPopup"; // Import the new component
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -21,15 +22,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop /> {/* Add the ScrollToTop component here */}
+        <ScrollToTop />
         <ExitIntentPopup />
+        <LifetimeDealPopup /> {/* Add the new LifetimeDealPopup here */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
-          <Route path="/about-us" element={<AboutUsPage />} /> {/* Add the new route here */}
+          <Route path="/about-us" element={<AboutUsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
