@@ -11,8 +11,9 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ExitIntentPopup from "./components/ExitIntentPopup";
-import LifetimeDealPopup from "./components/LifetimeDealPopup"; // Import the new component
+import LifetimeDealPopup from "./components/LifetimeDealPopup";
 import ScrollToTop from "./components/ScrollToTop";
+import RefundPolicyPage from "./pages/RefundPolicyPage"; // Import the new component
 
 const queryClient = new QueryClient();
 
@@ -24,13 +25,14 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <ExitIntentPopup />
-        <LifetimeDealPopup /> {/* Add the new LifetimeDealPopup here */}
+        <LifetimeDealPopup />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
+          <Route path="/refund" element={<RefundPolicyPage />} /> {/* Add the new route here */}
           <Route path="/about-us" element={<AboutUsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
