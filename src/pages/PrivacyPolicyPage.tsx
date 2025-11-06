@@ -11,93 +11,84 @@ const PrivacyPolicyPage = () => {
       <main className="pt-32 pb-20 px-6 bg-transparent text-foreground">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8 text-center drop-shadow-md text-primary">
-            Privacy Policy for Fortress Inventory
+            FORTRESS INVENTORY PRIVACY POLICY
           </h1>
           <p className="text-muted-foreground text-sm mb-12 text-center"> {/* Updated text color */}
-            Last Updated: October 1, 2025
+            Effective Date: October 1, 2025 | Last Updated: November 6, 2025
           </p>
 
           <div className="prose prose-invert max-w-none text-muted-foreground space-y-6"> {/* Updated text color */}
             <p>
-              This Privacy Policy describes how Fortress Inventory ("we," "us," or "our") collects, uses, and shares information in connection with your use of the Fortress Inventory web and mobile application and related services (collectively, the "Service").
+              This Privacy Policy describes how Fortress Inventory ("Company," "we," "us," or "our"), the provider of the Fortress Inventory service, collects, uses, and discloses information about our users and customers ("you" or "your").
             </p>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. Information We Collect</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">1. INFORMATION WE COLLECT</h2>
             <p>
-              We collect information to provide, maintain, and improve the Service. This information falls into two main categories:
+              We collect information to provide and improve the Service, manage your account, and communicate with you.
             </p>
 
-            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">A. Data You Provide Directly (Account and Inventory Data)</h3>
+            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">1.1 Information Provided by You</h3>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>Account Information:</strong> Your name, email address, phone number, and password (hashed).</li>
-              <li><strong>Billing Information:</strong> When you subscribe to a paid plan, we (or our third-party payment processor) collect necessary payment details, such as credit card information.</li>
-              <li><strong>Inventory Data (Customer Data):</strong> This is the core business data you input into the Service, including:
-                <ul className="list-disc list-inside ml-6 space-y-1">
-                  <li>Product names, SKUs, descriptions, and categories.</li>
-                  <li>Stock quantities, locations, and value/cost data.</li>
-                  <li>Purchase orders, supplier, and customer contact details.</li>
-                </ul>
-              </li>
+              <li><strong>Account Information:</strong> Name, email address, phone number, company name, billing address, and payment information (processed by a third-party service provider).</li>
+              <li><strong>Customer Data:</strong> All data you upload or input into the Service, including inventory records, SKU details, vendor information, location data, and transaction logs.</li>
+              <li><strong>Communications:</strong> Information exchanged when you contact customer support, participate in surveys, or interact with us via email.</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">B. Data We Collect Automatically (Technical and Usage Data)</h3>
+            <h3 className="text-2xl font-semibold text-secondary mt-6 mb-3">1.2 Information Collected Automatically</h3>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>Device Information:</strong> Information about the device you use to access the Service, including IP address, operating system, device identifiers, and mobile network information.</li>
-              <li><strong>Usage Information:</strong> Details about how you access and use the Service, such as the features you use, the time and duration of your activity, error reports, and crash data.</li>
-              <li><strong>Cookies and Tracking:</strong> We and our third-party partners may use cookies and similar technologies to track activity on the Service and hold certain information.</li>
+              <li><strong>Usage Data:</strong> Information about how you access and use the Service, such as feature usage, access times, pages viewed, and the path taken through the application.</li>
+              <li><strong>Device and Log Data:</strong> IP address, browser type, operating system, and device identifiers.</li>
+              <li><strong>Cookies and Tracking:</strong> We use cookies and similar technologies (like web beacons) to maintain your session, authenticate users, and analyze usage patterns.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">2. How We Use Your Information</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">2. HOW WE USE YOUR INFORMATION</h2>
             <p>
               We use the collected information for the following purposes:
             </p>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>To Provide the Service:</strong> To manage your account, process transactions, manage your inventory data, and provide customer support.</li>
-              <li><strong>To Improve and Customize the Service:</strong> To monitor usage trends, diagnose technical issues, and improve the functionality and performance of Fortress Inventory.</li>
-              <li><strong>Security and Fraud Prevention:</strong> To protect the integrity of the Service, your account, and other users' data.</li>
-              <li><strong>Communication:</strong> To send you service-related messages, such as low-stock alerts, security notices, and updates to the Privacy Policy or Terms of Service.</li>
-              <li><strong>Marketing:</strong> To send you promotional communications about our products and services, where permitted by law and in line with your preferences.</li>
+              <li><strong>2.1 Service Provision:</strong> To operate, maintain, and provide all features of the Fortress Inventory Service, including processing, tracking, and managing your inventory data.</li>
+              <li><strong>2.2 Security and Monitoring:</strong> To secure the Service, prevent fraud, and monitor for unauthorized activity.</li>
+              <li><strong>2.3 Communication:</strong> To send you technical notices, security alerts, and administrative messages, as well as to respond to your customer service requests.</li>
+              <li><strong>2.4 Improvement:</strong> To analyze usage trends and metrics to improve the quality, functionality, and performance of the Service.</li>
+              <li><strong>2.5 Marketing (with Consent):</strong> To send you promotional and marketing communications, subject to your communication preferences and consent.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">3. How We Share Your Information</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">3. HOW WE SHARE YOUR INFORMATION</h2>
             <p>
-              We do not sell your personal data or your Inventory Data to third parties for their marketing purposes. We may share information only in the following limited circumstances:
+              We do not sell your Customer Data or personal information. We may share information with third parties only in the following circumstances:
             </p>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>With Service Providers:</strong> We use trusted third parties (e.g., cloud hosting providers, analytics platforms, payment processors) to perform functions on our behalf. These third parties are obligated to protect your data and only use it as necessary to provide services to us.</li>
-              <li><strong>With Your Consent:</strong> We may share information with third parties when you give us explicit permission to do so (e.g., integrating with a third-party accounting system).</li>
-              <li><strong>For Legal Reasons:</strong> We may disclose your information if required to do so by law, to respond to a legal process (e.g., a court order or subpoena), or to protect our rights, property, or safety, or that of our users or the public.</li>
-              <li><strong>Business Transfers:</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
+              <li><strong>3.1 Service Providers:</strong> We share necessary information with vendors, consultants, and other third-party service providers who need access to the data to perform services on our behalf (e.g., cloud hosting, payment processing, customer support tools). These providers are legally bound to protect your data.</li>
+              <li><strong>3.2 Legal Obligations:</strong> We may disclose information if required to do so by law, such as to comply with a subpoena or other legal process, or to protect the rights, property, or safety of the Company or others.</li>
+              <li><strong>3.3 Business Transfers:</strong> Information may be transferred in connection with a merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company.</li>
+              <li><strong>3.4 With Your Consent:</strong> We may share information with third parties when you give us explicit permission to do so.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">4. Data Retention and Security</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">4. DATA SECURITY AND RETENTION</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>Data Retention:</strong> We retain your personal data and Inventory Data for as long as your account is active or as needed to provide you with the Service. We will also retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</li>
-              <li><strong>Security:</strong> We implement technical and organizational measures (such as encryption and access controls) designed to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.</li>
+              <li><strong>4.1 Security Measures:</strong> We use industry-standard technical and organizational security measures, including encryption and access controls, to protect the confidentiality and integrity of your data. However, no internet transmission is 100% secure.</li>
+              <li><strong>4.2 Data Retention:</strong> We retain your Customer Data for as long as your account is active or as needed to provide you the Service. Following termination, we securely delete or anonymize your data in accordance with the terms outlined in the Terms of Service.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">5. Your Data Rights</h2>
-            <p>
-              You have rights regarding your personal data, which may include:
-            </p>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">5. YOUR RIGHTS AND CHOICES</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li><strong>Access:</strong> The right to request copies of your personal data we hold.</li>
-              <li><strong>Correction:</strong> The right to request that we correct any information you believe is inaccurate or incomplete.</li>
-              <li><strong>Deletion (Right to Erasure):</strong> The right to request that we delete your personal data (and associated Inventory Data) under certain conditions.</li>
-              <li><strong>Objection/Opt-Out:</strong> The right to object to our processing of your personal data (e.g., for direct marketing).</li>
+              <li><strong>5.1 Account Information:</strong> You may update or correct your account information at any time by logging into your account settings.</li>
+              <li><strong>5.2 Opt-Out of Marketing:</strong> You can opt out of receiving promotional emails from us by following the unsubscribe instructions provided in those emails. You will still receive essential service-related communications.</li>
             </ul>
+
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">6. CHANGES TO THIS POLICY</h2>
             <p>
-              You can typically access and update your Account Information directly within the Service settings. For other requests, please contact us using the details below.
+              We may change this Privacy Policy from time to time. If we make material changes, we will notify you by email or through a prominent notice on the Service before the change takes effect.
             </p>
 
-            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">6. Contact Us</h2>
+            <h2 className="text-3xl font-bold text-primary mt-10 mb-4">7. CONTACT US</h2>
             <p>
-              If you have any questions about this Privacy Policy or our data practices, please contact us at:
+              If you have questions about this Privacy Policy, please contact us at:
             </p>
             <p className="space-y-1">
               <strong>Fortress Inventory</strong><br />
-              Email: <a href="mailto:privacy@fortressinventory.com" className="text-secondary hover:underline">privacy@fortressinventory.com</a><br /> {/* Updated link color */}
-              Address: Fortress Inventory 333 W 39th St. Ste 303, NY,NY 10018
+              Email: <a href="mailto:support@fortressinventory.com" className="text-secondary hover:underline">support@fortressinventory.com</a><br />
+              Address: 333 W 39th St New York, NY 10018
             </p>
           </div>
         </div>
