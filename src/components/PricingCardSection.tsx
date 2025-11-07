@@ -20,7 +20,7 @@ const pricingPlans = [
       "Basic Order Management",
     ],
     buttonText: "Try it for Free",
-    buttonLink: "https://app.fortressinventory.com",
+    buttonLink: "https://app.fortressinventory.com/signup", // Updated link
     highlight: true,
   },
   {
@@ -35,7 +35,7 @@ const pricingPlans = [
       "Basic Integrations (Coming Soon)",
     ],
     buttonText: "Start Your Free 14-Day Trial",
-    buttonLink: "https://app.fortressinventory.com", // Link to the full pricing page
+    buttonLink: "https://app.fortressinventory.com/signup", // Updated link
     highlight: false,
   },
   {
@@ -51,7 +51,7 @@ const pricingPlans = [
       "Shopify Integration (Coming Soon)",
     ],
     buttonText: "Start Your Free 14-Day Trial",
-    buttonLink: "https://app.fortressinventory.com",
+    buttonLink: "https://app.fortressinventory.com/signup", // Updated link
     highlight: false,
   },
   {
@@ -66,7 +66,7 @@ const pricingPlans = [
       "Dedicated Support & Onboarding",
     ],
     buttonText: "14 days Free Trial",
-    buttonLink: "https://app.fortressinventory.com", // Assuming a contact page exists or will be created
+    buttonLink: "https://app.fortressinventory.com/signup", // Updated link
     highlight: false,
   },
 ];

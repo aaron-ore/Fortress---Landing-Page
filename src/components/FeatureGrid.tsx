@@ -45,7 +45,7 @@ const FeatureGrid = () => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2); // Use the hook
 
   const handleGetStartedClick = () => {
-    window.location.href = "https://app.fortressinventory.com";
+    window.location.href = "https://app.fortressinventory.com/signup"; // Updated link
   };
 
   return (

@@ -56,7 +56,7 @@ const ExitIntentPopup = () => {
   }, [isMobile, handleMouseLeave, showPopup]);
 
   const handleGetStartedClick = () => {
-    window.location.href = "https://app.fortressinventory.com";
+    window.location.href = "https://app.fortressinventory.com/signup"; // Updated link
   };
 
   return (

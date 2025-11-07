@@ -93,7 +93,7 @@ const PricingPage = () => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
 
   const handleButtonClick = () => {
-    window.location.href = "https://app.fortressinventory.com";
+    window.location.href = "https://app.fortressinventory.com/signup"; // Updated link
   };
 
   return (

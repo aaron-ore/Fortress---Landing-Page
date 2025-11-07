@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"; // Import cn for conditional class names
 
 const HeroSection = () => {
   const handleGetStartedClick = () => {
-    window.location.href = "https://app.fortressinventory.com";
+    window.location.href = "https://app.fortressinventory.com/signup"; // Updated link
   };
 
   return (

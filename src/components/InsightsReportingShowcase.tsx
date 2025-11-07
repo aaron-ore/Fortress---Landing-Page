@@ -12,7 +12,7 @@ const InsightsReportingShowcase = () => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>(0.2);
 
   const handleGetStartedClick = () => {
-    window.location.href = "https://app.fortressinventory.com";
+    window.location.href = "https://app.fortressinventory.com/signup"; // Updated link
   };
 
   return (
