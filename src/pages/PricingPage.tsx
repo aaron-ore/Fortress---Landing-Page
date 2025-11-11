@@ -83,7 +83,7 @@ const pricingPlans = [
       { name: "QuickBooks Integration (Coming Soon)", included: true },
       { name: "Shopify Integration (Coming Soon)", included: true },
       { name: "Automation Engine", included: true },
-      { name: "Dedicated Support", included: true },
+      { name: "Priority Support", included: true }, // Changed from "Dedicated Support"
     ],
     buttonText: "14 days Free Trial",
   },

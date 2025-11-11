@@ -63,7 +63,7 @@ const pricingPlans = [
       "Unlimited Users",
       "AI Summary for Reports",
       "Automation Engine",
-      "Dedicated Support & Onboarding",
+      "Priority Support & Onboarding", // Changed from "Dedicated Support & Onboarding"
     ],
     buttonText: "14 days Free Trial",
     buttonLink: "https://app.fortressinventory.com/signup", // Updated link
